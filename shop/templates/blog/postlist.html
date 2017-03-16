@@ -1,0 +1,20 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+{% block title %}
+PostList
+{% endblock %}
+{% block content %}
+
+<section class="blog-post-list" >
+{% for post in posts %}
+    <section class="post-window">
+     <a href="{{post.get_post_url }}">
+       <img src="{% if post.image %}{{ post.image.url }}{% else %}{% static "img/no-image.jpg"%}{% endif %}" class="img-responsive" alt="post-image">
+      </a>
+       <p class="post-title"><a href="{{ post.get_post_url}}">{{post.name }}</a></p>
+    </section>
+  {% endfor %}
+  </section>
+
+{% endblock %}
+

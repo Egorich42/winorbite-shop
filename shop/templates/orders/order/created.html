@@ -1,0 +1,13 @@
+{% extends "shop/base.html" %}
+{% block title %}
+  | Спасибо за заказ
+{% endblock %}
+{% block content %}
+<section class="order-form">
+<section class="thanks">
+<h1>Спасибо за заказ</h1>
+<p>Идентификатор вашего заказа: {{ order.id }}</p>
+Мы свяжемся с вами в течении часа!
+</section>
+</section>
+{% endblock %}

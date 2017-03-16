@@ -1,0 +1,32 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+{% block title %}
+{% if category %}| {{ category.name }} {% else %}|Главная{% endif %}
+{% endblock %}
+{% block content %}
+
+<section class="categories">
+  <ul>
+
+    <li>
+      <a href="/blog/blog/">Блог</a>
+    </li>
+
+
+    <li>
+      <a href="/data/data/">ДАТА</a>
+    </li>
+
+    {% for category in categories %}
+
+    <li>
+      <a href="category/{{category.slug}}">{{ category.name }}</a>
+    </li>
+
+    {% endfor %}
+
+  </ul>
+
+</section>
+{% endblock %}
+

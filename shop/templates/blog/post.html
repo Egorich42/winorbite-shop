@@ -1,0 +1,19 @@
+{% extends "shop/base.html" %}
+{% load static %}
+{% block title %}
+  | {{ post.name }}
+{% endblock %}
+{% block content %}
+<section class="blog-post-full">
+  <section class="full-post">
+  <h1>{{ post.name }}</h1>    
+      <img  src="{% if post.image %}{{ post.image.url }}{% else %}{% static "img/no-image.jpg"%}{% endif %}" class="post-info"  alt="fullImage"/>    
+     <h2>{{post.short_description}}</h2>   
+      <section class="full-description">
+             {{post.story|safe}}
+      </section>
+   </section>
+</section>
+
+
+{% endblock %}
