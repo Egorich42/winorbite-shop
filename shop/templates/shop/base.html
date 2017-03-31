@@ -76,7 +76,7 @@
 
 <header>
   <a href="/">
-    <img src="{% static "/logo.png" %}" alt="logo" title="logo">
+    <img src="{% static "/LOGO3.png" %}" alt="logo" title="logo">
   </a>
 
   <section class="main-menue">
@@ -150,6 +150,14 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="{% static "/JS/script.js" %}"></script>
+<script type="text/javascript">
+if (document.documentElement.clientWidth <1134){
+var x = document.getElementById("m_button"); 
+x.style.display = "none";
+console.log('GGGGG');
+console.log(x);
 
+}
+</script>
 </body>
 </html>

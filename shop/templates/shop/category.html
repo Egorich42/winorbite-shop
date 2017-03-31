@@ -10,7 +10,7 @@
 
  <div class="hidebutt top">Меню</div>
 
-  <ul class="bottom">
+  <ul class="bottom" id="m_button">
    {% for cat in cat_list%}
     <li>
       <a href="{{cat.get_absolute_url}}">{{cat.name}}</a>

@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     'orders',
     'blog',
     'data',
+    'mails',
 ]
 
 MIDDLEWARE_CLASSES = [
