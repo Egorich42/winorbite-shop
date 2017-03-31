@@ -6,7 +6,7 @@ from django.http import HttpResponse
 from .forms import *
 
 def PostList(request):
-    posts = Post.objects.all()
+    posts = Post.objects.all().order_by('created')
     return render(request, 'blog/postlist.html', {'posts': posts })
 
 
