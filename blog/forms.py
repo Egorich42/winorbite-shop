@@ -4,8 +4,8 @@ from django import forms
 from .models import *
 
 
-class write_post(forms.ModelForm):
+class PostForm(forms.ModelForm):
     class Meta:
         model = Post
-        fields = ['name', 'story',]
+        fields = ['name', 'story','slug',]
 

@@ -9,7 +9,7 @@ class PostItemInline(admin.TabularInline):
     raw_id_field = ['post']
 
 class PostAdmin(admin.ModelAdmin):
-    list_display = ['id', 'name','created']
+    list_display = ['id', 'name','created','slug']
 
 
 admin.site.register(Post, PostAdmin)
