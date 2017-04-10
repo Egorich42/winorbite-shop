@@ -5,6 +5,6 @@ from . import views
 
 
 urlpatterns = [
-    url(r'^blog/$', views.PostList, name='PostList'),
-    url(r'^(?P<id>\d+)/(?P<slug>[-\w]+)/$', views.PostDetail, name='PostDetail'),
+    url(r'^$', views.post_list, name='post_list'),
+    url(r'^new/$', views.create_post, name='create_post'),
 ]
