@@ -1,8 +1,8 @@
+#! /usr/bin/env python
 # -*- coding: utf-8 -*-
 from django.db import models
 from django.core.urlresolvers import reverse
 
-# Create your models here.
 class Post(models.Model):
     name = models.CharField(max_length=200, db_index=True, verbose_name="Название")
     slug = models.SlugField(max_length=200, db_index=True)
@@ -12,12 +12,12 @@ class Post(models.Model):
 
     class Meta:
         ordering = ['name']
-        index_together = [['id', 'slug']]
+        index_together = [['slug']]
         verbose_name = 'Статья'
         verbose_name_plural = 'Статьи'
 
     def get_post_url(self):
-        return reverse('blog:PostDetail', args=[self.id, self.slug])    
+        return reverse('blog:post_detail', args=[self.slug])
 
     def __unicode__(self):
         return self.name

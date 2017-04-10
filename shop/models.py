@@ -5,7 +5,7 @@ from django.core.urlresolvers import reverse
 from django.template.defaultfilters import slugify
 
 class Category(models.Model):
-    icon = models.ImageField(upload_to='products/', blank=True, verbose_name="Изображение ткатегории")
+    icon = models.ImageField(upload_to='products/', blank=True, verbose_name="Изображение")
     name = models.CharField(max_length=200, db_index=True, verbose_name="Название")
     slug = models.SlugField(max_length=200, db_index=True,blank=True)
 
