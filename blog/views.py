@@ -27,38 +27,9 @@ def post_list(request):
     return render(request, 'blog/post_list.html', {'posts': posts })
 
 
-<<<<<<< HEAD
-def create_post(request):
-    if request.method == "POST":
-        form = write_post(request.POST)  
-        if form.is_valid():
-            post = form.save(commit=False)
-            post.author = request.user
-            post.save()
-            return redirect('blog/post_detail.html', pk=post.pk)
-    else:
-        form = write_post()
-
-    return render(request, 'blog/edit.html',{'form': form}) 
-
-
-
-def full_post(request):
-	
-
-
-def post_list(request):
-    posts = Post.objects.all().order_by('created')
-    return render(request, 'blog/postlist.html', {'posts': posts })
-=======
->>>>>>> 37507b5fd550b7e13e4051ab5f5864867e99b54e
 
 def post_detail(request, slug):
     post = get_object_or_404(Post, slug=slug)
 
-<<<<<<< HEAD
-
-=======
     return render(request, 'blog/post.html', {'post':post})
->>>>>>> 37507b5fd550b7e13e4051ab5f5864867e99b54e
 

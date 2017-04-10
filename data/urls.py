@@ -4,5 +4,5 @@ from django.conf.urls import url
 from . import views
 
 urlpatterns = [
-    url(r'^data/$', views.DataList, name='DataList'),
+    url(r'^data/$', views.show_data_list, name='show_data_list'),
 ]

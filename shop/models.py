@@ -33,7 +33,7 @@ class Product(models.Model):
     parameter_value =  models.CharField(max_length=50, db_index=True, blank=True, verbose_name="значение параметра")
     second_parameter = models.CharField(max_length=200, db_index=True, blank=True, verbose_name="Параметр")
     second_parameter_value = models.CharField(max_length=50, db_index=True, blank=True, verbose_name="значение параметра")
-    price = models.DecimalField(max_digits=10, decimal_places=2, verbose_name="Цена белрубли")
+    price = models.DecimalField(max_digits=10, decimal_places=2, verbose_name="Цена бел.рубли")
     price_rub = models.DecimalField(max_digits=10,  blank=True, default='1',  decimal_places=2, verbose_name="Цена рубли")
     created = models.DateTimeField(auto_now_add=True, verbose_name='Создан')
    
