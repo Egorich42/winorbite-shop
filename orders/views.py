@@ -1,17 +1,35 @@
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
-from .models import OrderItem
-from .forms import OrderCreateForm
+from .models import *
+from .forms import *
 from cart.cart import Cart
 from django.shortcuts import render
+from django.core.mail import *
+from .values import *
+
 
 
 def OrderCreate(request):
     cart = Cart(request)
     if request.method == 'POST':
+
         form = OrderCreateForm(request.POST)
         if form.is_valid():
             order = form.save()
+            product = OrderItem.product  
+            name = Order.email
+            price = OrderItem.price
+            datatuple = (
+                 ('Новый заказ','Пришел новый заказ'
+                    +str(product)
+                    +str(name),
+                    from_who , clients),
+             )
+            send_mass_mail(datatuple)
+
+
+
+
             for item in cart:
                 OrderItem.objects.create(order=order, product=item['product'],
                                          price=item['price'],

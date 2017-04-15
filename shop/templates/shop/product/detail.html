@@ -5,7 +5,9 @@
 {% endblock %}
 {% block content %}
 <section class="main-block">
+
   <section class="main-list-full">
+
     <section class="parameters-window">
         <img  src="{% if product.image %}{{ product.image.url }}{% else %}{% static "img/no-image.jpg"%}{% endif %}" class="full-img" alt="fullImage">
 
@@ -37,20 +39,19 @@
         </section>
     </section>
 
- <p class="full-description">
-         <div id="disqus_thread"></div>
-         <script id="dsq-count-scr" src="//http-winorbite-com.disqus.com/count.js" async></script>
-<script>
-(function() { 
-var d = document, s = d.createElement('script');
-s.src = '//http-winorbite-com.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-                                
-        </p>
+
+     <div id="disqus_thread" style="width: 90%; margin-left: 5%;"></div>
+    <script id="dsq-count-scr" src="//http-winorbite-com.disqus.com/count.js" async></script>
+      <script>
+        (function() { 
+        var d = document, s = d.createElement('script');
+        s.src = '//http-winorbite-com.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+      </script>
+     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
 
 
   </section>
