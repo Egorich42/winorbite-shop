@@ -4,10 +4,8 @@ from .models import *
 from .forms import *
 from cart.cart import Cart
 from django.shortcuts import render
-from django.core.mail import *
+from django.core.mail import send_mail, send_mass_mail
 from .values import *
-
-
 
 def OrderCreate(request):
     cart = Cart(request)
@@ -19,16 +17,11 @@ def OrderCreate(request):
             product = OrderItem.product  
             name = Order.email
             price = OrderItem.price
-            datatuple = (
-                 ('Новый заказ','Пришел новый заказ'
-                    +str(product)
-                    +str(name),
-                    from_who , clients),
-             )
-            send_mass_mail(datatuple)
-
-
-
+            order.save() 
+            send_mail('Новый заказ','Пришел новый заказ'
+                    +str(order.email)
+                    +str(order.created),
+                    from_who, clients)
 
             for item in cart:
                 OrderItem.objects.create(order=order, product=item['product'],
