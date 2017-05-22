@@ -5,12 +5,15 @@ from .models import Category, Product
 from cart.forms import CartAddProductForm
 from django.http import HttpResponse
 from django.template.defaultfilters import slugify
-
+from blog.models import Post
 
 def ProductList(request):
-    categories = Category.objects.all()    
+    categories = Category.objects.all()
+    products = Product.objects.all().order_by('id')[:2]
+    posts = Post.objects.all().order_by('id')[:1]
+    
     return render_to_response('shop/product/list.html', {
-        'categories': categories,
+        'categories': categories,'products': products, 'posts': posts,
         })
 
 

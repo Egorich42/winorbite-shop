@@ -136,39 +136,75 @@ li,
 body{background-color:#ECECEA;}
 a:hover{text-decoration:none;}
 input:focus{
-	background-color:lightblue;
-	border-radius:4px;
-	border:3px solid #555;}
-header{min-height:200px;}
-header a:hover{text-decoration:none;}
-header h1{font-size:5em;}
-td{width:20%;}
+background-color:lightblue;
+border-radius:4px;
+border:3px solid #555;
+}
+
+header{
+min-height:200px;
+}
+
+header a:hover{
+text-decoration:none;
+}
+
+header h1{
+font-size:5em;
+}
+
+td{
+width:20%;
+}
+
 h2{
-	margin:0px;
-	padding:0px;}
+margin:0px;
+padding:0px;
+}
+
+
 footer{
-	width: 100%; 
-	position: absolute; 
-	height: auto; 
-	margin-top: 200px; 
-	text-align: center; 
-	color: #fff;
-    background:linear-gradient(#656565, #444);
-    text-shadow:0 1px 0 #2f2f2f;
-	border:solid 1px #535353;
-	font-size: 22px;
+width: 100%; 
+height: auto; 
+margin-top: 200px; 
+text-align: center; 
+color: #fff;
+background:linear-gradient(#656565, #444);
+text-shadow:0 1px 0 #2f2f2f;
+border:solid 1px #535353;
+font-size: 22px;
 }
 
 
 /*-----------------------------------------MAIN-----------------*/
 
 .main-tagline{
-width: 65%;
+width: 45%;
 float: right; 
 text-align: center; 
-padding-top: 100px;  
 color: #595959;
+max-width: 900px;
+display: inline-block;
+height: 400px;
  }
+
+.main-tagline-blog{width: 100%;  border: solid 2px #000; max-width: 800px;}
+.blog-image-border{overflow: hidden;}
+.blog-image-border img{}
+.main-tagline-product{width: 40%; margin: 5%; border: solid 2px #000; max-width:400px;float: left; }
+
+
+
+.blog-chained-posts{display: inline-block; height: 120px; width: 100%;}
+.chain-post{width: 20%; margin: 5% 2.5%; height: 100px; float: left;border: solid 2px #000;}
+.chain-post p {text-align: center; padding-top: 20px; margin-top: -90px;}
+.chain-post p a {text-align: center; padding-top: 20px; color: #000;}
+.chain-post p a:hover{text-decoration: none; }
+
+.ramka{width: 90%; overflow: hidden; height: 100%;}
+
+.ramka img{width: 200%;}
+
 
 .cart{
 font-size:1.4em;
@@ -447,7 +483,7 @@ font-size: 16px;}
 
 /*------------MEDIA------------------------------*/
 
-<<<<<<< HEAD
+
 @media only screen and (max-device-width: 1920px) {
 .main-tagline{
 width: 60%;
@@ -462,14 +498,11 @@ color: #595959;
 
 @media only screen and (max-device-width: 1280px) {}
 
-=======
->>>>>>> 9e2e14b600d017f6b3f91ddeb2eb4ba3424ab825
 @media only screen and (max-device-width: 1134px) {
 .categories li {
 border-radius: 0px;
 text-align: center; 
 color: #656565; 
-text-shadow:0 1px 0 #2f2f2f;
 width: 90%;
 border: none;
 text-align: left;
@@ -503,8 +536,8 @@ font-size: 42px;
 .main-list-full,
 .howWeWork,
 .products,
- .post-window,
- .full-description,
+.post-window,
+.full-description,
 .full-post{width:100%;}
 
 .main-list,
@@ -538,8 +571,8 @@ padding-left: 50px;
 font-size: 18px;}
 
 .product-information h1,
- .price,
- .parameters{margin: 10px 0px;}
+.price,
+.parameters{margin: 10px 0px;}
 
 .product-window,
  .post-window{
@@ -561,10 +594,29 @@ margin: 0% 5%;}
 width: 50%; 
 float:left;}
 
+.main-tagline{
+width: 0px; 
+height: 0px; 
+visibility: hidden;
+}
 
 .categories{
+width: 100%;
 margin: 0px; 
-padding: 0px;}
+padding: 0px;
+}
+
+.categories ul{
+padding: 0px;
+margin: 0px;	
+}
+
+.categories ul li{
+text-align: center;
+border: solid 1px;
+padding: 20px 0px;
+margin-left: 5%;
+}
 
 .categories li a {
 font-size: 40px;
@@ -683,6 +735,10 @@ tr{height: 100px;}
 
 footer {margin-top: 100px;}
 
+.chain-post p a{font-size: 18px;}
+
+
+
 }
 
 
@@ -694,9 +750,22 @@ footer {margin-top: 100px;}
 .social-links a img {
 width: 60px;
 height: 60px;
-margin: 10px;}
+margin: 10px;
+}
+
+
+
+.blog-chained-posts{display: inline-block; height: 120px;}
+.chain-post{width: 45%; margin: 5% 2.5%; height: 200px; float: left;border: solid 2px #000;}
+.chain-post p a{font-size: 25px;}
+
+.chain-post img{width: 90%; max-width: 200px;}
+
 
 }
+
+
+
 
 @media only screen and (max-device-width: 800px) {
 .product-window,
@@ -732,6 +801,7 @@ width: 100%;
 
 @media only screen and (max-device-width: 640px) {
 
+.chain-post p a{font-size: 22px;}
 
 .categories li a{ 
 font-size: 52px;}
@@ -756,5 +826,51 @@ padding: 20px 0px;
  height: 85px;
  font-size: 55px;
 }
+
+}
+
+@media only screen and (max-device-width: 500px) {
+
+.title a {
+font-size: 3em;
+}
+
+.categories li a {
+ font-size: 60px;
+ margin-top: 80px;
+}
+
+
+.post-window {
+ margin: 80px 0px;
+}
+
+.post-title{
+margin: 30px 0px;	
+}
+
+.parameters,.price{
+font-size: 2em;	
+}
+
+}
+
+@media only screen and (max-device-width: 370px) {
+
+
+.background {
+top: 400px;
+}	
+
+
+.blog-chained-posts{display: inline-block; height: 120px;}
+.chain-post{width: 100%; margin: 5% 0%; height: 100px; float: left;border: solid 2px #000;}
+.chain-post img{width: 90%; max-width: 200px;}
+
+footer{
+margin-top: 1000px; 
+font-size: 35px;
+}
+
 
 }
