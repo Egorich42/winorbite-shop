@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 from django.db import models
 from django.core.urlresolvers import reverse
-import vk
+#import vk
 """
 def post_wall():
     print('BRZW')
@@ -11,8 +11,6 @@ def post_wall():
     vk_api.wall.post(owner_id=-140316393, attachments='http://winorbite.com/blog/Injustice2-story/', message="Написал тут про игоры",from_group=1,signed=1)
 """
 
-def crypton():
-    return print("crypto")
 
 class Post(models.Model):
     name = models.CharField(max_length=200, db_index=True, verbose_name="Название")
@@ -35,9 +33,9 @@ class Post(models.Model):
 
 
     def __unicode__(self):
-        print('unicod')
-        session = vk.AuthSession('6049127', 'zonaegora@mail.ru', 'elonbatya42r',  scope='wall, messages')
-        vk_api = vk.API(session)
-        vk_api.wall.post(owner_id=-140316393, attachments='http://winorbite.com/blog/Injustice2-story/', message="Написал тут про игоры",from_group=1,signed=1)
+   #     print('unicod')
+  #      session = vk.AuthSession('6049127', 'zonaegora@mail.ru', 'elonbatya42r',  scope='wall, messages')
+ #       vk_api = vk.API(session)
+#        vk_api.wall.post(owner_id=-140316393, attachments='http://winorbite.com/blog/Injustice2-story/', message="Написал тут про игоры",from_group=1,signed=1)
 
         return self.name

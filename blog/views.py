@@ -22,7 +22,7 @@ def create_post(request):
 
 
 def post_list(request):
-    posts = Post.objects.all().order_by('id')
+    posts = Post.objects.all().order_by('-id')
     return render(request, 'blog/post_list.html', {'posts': posts })
 
 

@@ -37,10 +37,11 @@ def category(request, category_name_slug):
 
 def ProductDetail(request, id, slug):
     product = get_object_or_404(Product, id=id, slug=slug)
+    product_category= product.category
     cart_product_form = CartAddProductForm()
     return render(request, 'shop/product/detail.html',
                              {'product': product,
-                              'cart_product_form': cart_product_form})
+                              'cart_product_form': cart_product_form, 'product_category':product_category})
 
 def paymentList(request):
     return render(request, 'shop/payment.html')
