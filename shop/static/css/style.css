@@ -207,6 +207,16 @@ height: 400px;
 .ramka img{width: 200%;}
 
 
+.blog-post-full {
+border: solid 20px #EDEBEA;
+}
+
+
+.top_link{
+font-size: 30px;
+color: #858382;
+}
+
 .cart{
 font-size:1.4em;
 }
@@ -524,6 +534,7 @@ padding: 12px 20px;
 font-size: 42px;
 }
 
+
 }
 
 
@@ -739,6 +750,13 @@ tr{height: 100px;}
 
 .chain-post p a{font-size: 18px;}
 
+.blog-post-full {
+border: none;
+}
+
+.blog-chained-posts {
+height: auto;
+}
 
 
 }
@@ -747,6 +765,10 @@ tr{height: 100px;}
 @media only screen and (max-device-width: 940px) {
 .about-class{margin: 20px 0px;}
 .about-class a{font-size: 28px;}
+
+
+
+
 
 .side-cat li {font-size: 24px;}
 .social-links a img {
@@ -760,9 +782,6 @@ margin: 10px;
 .blog-chained-posts{display: inline-block;}
 .chain-post{width: 45%; margin: 5% 2.5%; height: 200px; float: left;border: solid 2px #000;}
 .chain-post p a{font-size: 25px;}
-
-.chain-post img{width: 90%; max-width: 200px;}
-
 
 }
 
@@ -865,9 +884,9 @@ top: 400px;
 }	
 
 
-.blog-chained-posts{display: inline-block; height: 120px;}
+.blog-chained-posts{display: inline-block; }
 .chain-post{width: 100%; margin: 5% 0%; height: 100px; float: left;border: solid 2px #000;}
-.chain-post img{width: 90%; max-width: 200px;}
+.chain-post img{width: 90%; }
 
 footer{
 margin-top: 1000px; 

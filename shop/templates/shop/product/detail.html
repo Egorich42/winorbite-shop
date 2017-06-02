@@ -8,11 +8,15 @@
 
   <section class="main-list-full">
 
+<a href="/" class="top_link">главная</a>/<a href="/blog" class="top_link">блог</a> 
+
     <section class="parameters-window">
         <img  src="{% if product.image %}{{ product.image.url }}{% else %}{% static "img/no-image.jpg"%}{% endif %}" class="full-img" alt="fullImage">
 
         <section class="product-information">
           <h1>{{ product.name }}</h1>
+                    <h1>{{ product.category }}</h1>
+
 
           <section class="price-full-info">
             <p class="price">{{ product.price }} руб.</p>
