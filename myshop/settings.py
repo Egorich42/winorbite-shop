@@ -32,8 +32,8 @@ INSTALLED_APPS = [
     'cart',
     'orders',
     'blog',
-    'data',
-    'CMR',
+ #   'data',
+#    'CMR',
 ]
 
 MIDDLEWARE_CLASSES = [

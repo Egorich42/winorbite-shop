@@ -49,26 +49,16 @@
 
 
 </section-->
+<section class = "main-line">
+<a href="/blog/"> Блог</a> / <a href="/categorys/">Магазин</a>
+</section>
 
-<section class="categories">
-  <ul>
 
-    <li>
-      <a href="/blog/" style="color: #000;">Блог</a>
-    </li>
 
   
     <!--li>
       <a href="/data/data/">ДАТА</a>
     </li-->
-
-    {% for category in categories %}
-
-    <li>
-      <a href="category/{{category.slug}}">{{ category.name }}</a>
-    </li>
-
-    {% endfor %}
 
   </ul>
 

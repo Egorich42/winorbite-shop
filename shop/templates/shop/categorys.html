@@ -1,0 +1,66 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+{% block title %}
+| Магазин
+{% endblock %}
+{% block content %}
+
+<section class="main-list">
+
+  <aside class="side-cat box">
+
+    <div class="hidebutt top">Меню</div>
+
+      <ul class="bottom" id="m_button">
+        <li>
+         <a href="/blog">Блог</a>
+        </li> 
+    
+           {% for category in categories %}
+
+        <li>
+           <a href="{{category.slug}}">{{ category.name }}</a>
+        </li>
+
+           {% endfor %}
+
+      </ul>
+
+
+  </aside>
+
+
+
+
+
+    <section class="products">
+       {% for product in products %}
+
+        <section class="product-window">
+    
+          <article class = "image">
+            <a href="{{ product.get_absolute_url }}">
+              <img src="{{ product.image.url}}"  alt="product-image" >
+            </a>
+          </article>
+
+          <article class="info">
+            <p class="title">
+            <a href="{{ product.get_absolute_url }}">{{ product.name }}</a>
+            </p>
+            <span class="parameters">{{product.parameter}}</span>       
+            <span class="parameters">{{product.parameter_value}} </span>
+            <p class = "price">{{ product.price }} руб.</p>
+            <!--p class = "price">{{ product.price_rub }} руб.</p-->
+          </article>
+
+        </section>
+
+      {% endfor %}
+
+    </section>
+ 
+</section>
+
+{% endblock %}
+

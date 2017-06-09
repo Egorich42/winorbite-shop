@@ -194,6 +194,8 @@ height: 400px;
 .main-tagline-product{width: 40%; margin: 5%; border: solid 2px #000; max-width:400px;float: left; }
 
 
+.main-line{text-align: center;font-size: 65px; color: #484848; }
+.main-line a{ color: #484848; }
 
 .blog-chained-posts{display: inline-block; height: 150px;  margin-bottom: 100px; width: 100%;}
 .chain-post{width: 20%; margin: 5% 2.5%; height: 100px; float: left;border: solid 2px #000; overflow: hidden;}

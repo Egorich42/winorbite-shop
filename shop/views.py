@@ -43,6 +43,14 @@ def ProductDetail(request, id, slug):
                              {'product': product,
                               'cart_product_form': cart_product_form, 'product_category':product_category})
 
+
+def categoryList(request):
+    categories = Category.objects.all()
+    products = Product.objects.all().order_by('?')[:30]
+
+
+    return render(request, 'shop/categorys.html',{'categories':categories, 'products':products})
+
 def paymentList(request):
     return render(request, 'shop/payment.html')
 
