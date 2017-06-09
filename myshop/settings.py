@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'blog',
  #   'data',
 #    'CMR',
+#    'users',
 ]
 
 MIDDLEWARE_CLASSES = [

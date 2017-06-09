@@ -8,7 +8,10 @@
 
   <section class="main-list-full">
 
-<a href="/" class="top_link">главная</a>/<a href="/blog" class="top_link">блог</a> 
+
+<a href="/" class="top_link">главная</a>/<a href="/categorys" class="top_link">магазин</a> 
+
+
 
     <section class="parameters-window">
         <img  src="{% if product.image %}{{ product.image.url }}{% else %}{% static "img/no-image.jpg"%}{% endif %}" class="full-img" alt="fullImage">
@@ -46,6 +49,24 @@
           </section>
         </section>
     </section>
+
+
+
+<section class="blog-chained-posts"> 
+ {% for prod_chained in products %}
+    <section class="chain-post">
+     <article class="ramka">
+       <a href="{{product.get_post_url }}">
+       <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static "img/no-image.jpg"%}{% endif %}" class="img-responsive" alt="product-image">
+      </a>
+     </article>
+
+       <p><a href="{{ product.get_post_url}}">{{prod_chained.name }}</a></p>
+    </section>
+  {% endfor %}
+</section>
+
+
 
 
      <div id="disqus_thread" style="width: 90%; margin-left: 5%;"></div>
