@@ -7,16 +7,18 @@
 <meta name="robots" content="index, follow" /> 
 <meta name="robots" content="noyaca"/>
 <meta name="robots" content="noodp"/>
-<meta name="keywords" content="Winorbite.com, винорбит ком, winorbite com, winorbite, зимняя орбита, необычные подарки, подарки, гик, гики, интернет-магазин, доставка, купочтой, Беларусь, Минск"/>
-<meta name="description" content="Подборка самых лучших гиковских вещиц и креативных подарков "/>
+<meta name="keywords" content="Winorbite.com, винорбит ком, winorbite com, winorbite, зимняя орбита, необычные подарки, подарки, гик, гики, интернет-магазин, доставка, почтой, Беларусь, Минск"/>
+<meta name="description" content="Лучший магазин гиковской атрибутики"/>
 <meta property="business:contact_data:email" content="winorbite@gamil.com"/>
-<meta property="business:contact_data:phone_number" content="++375333516975"/>
+<meta property="business:contact_data:phone_number" content="+375333516975"/>
 <meta property="business:contact_data:website" content="http://winorbite.com/"/>
 
-<meta property="og:title" content="Зимняя орбита" />
-<meta property="og:type" content="website" />
+<meta property="og:title" content="Зимняя орбита| {% if post.name %}{{ post.name }}{% elif product.name %}{{product.name}}{%endif%}" /><meta property="og:type" content="website" />
 <meta property="og:url" content="http://winorbite.com/" />
-<meta property="og:image" content="/media/s-logo.png"/>
+
+<meta property="og:image" content="{% if product.image %}{{ product.image.url }}{% elif post.image %}{{ post.image.url }}{% else %}{% static "/media/s-logo.png"%}{% endif %}"/>
+
+
 
 <link rel="stylesheet" href="{% static "/css/style.css" %}">
 <link rel="shortcut icon" href="/media/favicon.ico">
@@ -154,9 +156,6 @@
 if (document.documentElement.clientWidth <1134){
 var x = document.getElementById("m_button"); 
 x.style.display = "none";
-console.log('GGGGG');
-console.log(x);
-
 }
 </script>
 </body>
