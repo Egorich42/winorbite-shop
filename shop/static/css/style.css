@@ -502,6 +502,21 @@ font-weight: 700;
 }
 
 
+nav{width: 80%;}
+
+nav ul li {
+text-align: center;
+width: 25%;
+border-left: solid;
+float: left;
+}
+
+nav ul li:last-child{border-right: solid;}
+
+nav ul li a{color: #000; text-decoration: none; font-size: 1.8em;}
+nav ul li a:hover{text-decoration: none;}
+
+.social-links a{padding: 2.5%;}
 
 .commentary-disqus{width: 90%; margin-left: 5%;}
 
@@ -519,6 +534,7 @@ color: #595959;
 }
 
 @media only screen and (max-device-width: 1366px) {}
+
 
 @media only screen and (max-device-width: 1280px) {}
 

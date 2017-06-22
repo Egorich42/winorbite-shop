@@ -12,7 +12,7 @@ def ProductList(request):
     products = Product.objects.all().order_by('id')[:2]
     posts = Post.objects.all().order_by('id')[:1]
     
-    return render_to_response('shop/product/list.html', {
+    return render_to_response('shop/product/product_list.html', {
         'categories': categories,'products': products, 'posts': posts,
         })
 
@@ -31,7 +31,7 @@ def category(request, category_name_slug):
 
     except Category.DoesNotExist:
         pass
-    return render(request, 'shop/category.html', context_dict)
+    return render(request, 'shop/product/category.html', context_dict)
 
 
 
@@ -42,7 +42,7 @@ def ProductDetail(request, id, slug):
     cart_product_form = CartAddProductForm()
 
 
-    return render(request, 'shop/product/detail.html',
+    return render(request, 'shop/product/product_detail.html',
         {'product': product,'cart_product_form': cart_product_form,
          'product_category':product_category, 'products': products})
 
@@ -50,13 +50,11 @@ def ProductDetail(request, id, slug):
 def categoryList(request):
     categories = Category.objects.all()
     products = Product.objects.all().order_by('?')[:30]
-
-
-    return render(request, 'shop/categorys.html',{'categories':categories, 'products':products})
+    return render(request, 'shop/shop_main.html',{'categories':categories, 'products':products})
 
 def paymentList(request):
-    return render(request, 'shop/payment.html')
+    return render(request, 'shop/singles/payment.html')
 
 def contactList(request):
-    return render(request, 'shop/contact.html')
+    return render(request, 'shop/singles/contact.html')
 

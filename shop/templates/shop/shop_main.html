@@ -8,29 +8,15 @@
 <section class="main-list">
 
   <aside class="side-cat box">
-
     <div class="hidebutt top">Меню</div>
-
-      <ul class="bottom" id="m_button">
-        <li>
-         <a href="/blog">Блог</a>
-        </li> 
-    
+      <ul class="bottom" id="m_button">  
            {% for category in categories %}
-
         <li>
            <a href="{{category.slug}}">{{ category.name }}</a>
         </li>
-
            {% endfor %}
-
       </ul>
-
-
   </aside>
-
-
-
 
 
     <section class="products">

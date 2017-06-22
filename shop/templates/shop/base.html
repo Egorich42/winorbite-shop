@@ -81,8 +81,17 @@
     <img src="{% static "/LOGO3.png" %}" alt="logo" title="logo">
   </a>
 
-  <section class="main-menue">
-    <section class="social-links">
+
+<nav>
+  <ul>
+    <li><a href="/blog/">блог</a></li>
+    <li><a href="/shop/">магазин</a></li>
+    <li><a  href="{% url "shop:contactList"%}">контакты</a></li>
+    <li><a href="{% url "shop:paymentList"%}">доставка и оплата</a></li>
+  </ul> 
+</nav>
+
+<section class="social-links">
 
          <!--a href="#">
            <img src="/media/social-links/telegram.png"  title="Телеграм Орбиты"  alt="Telegram">
@@ -109,13 +118,15 @@
          </a>
 
 
-         <section class="about-class">
-            <a  href="{% url "shop:paymentList"%}" class="head-butts" >доставка и оплата</a>|
+         <!--section class="about-class">
+            <a  href="{% url "shop:paymentList"%}" class="head-butts" >доставка и оплата</a>
+
+            |
             <a  href="{% url "shop:contactList"%}" class="head-butts" >наши контакты</a>
-         </section>
+         </section-->
 
     </section>
-
+  <section class="main-menue">
     <section class="cart-head">
       {% with total_items=cart|length %}
           {% if cart|length > 0 %} 
@@ -134,7 +145,12 @@
     </section>
 
   </section>
+
+
+
+
 </header>
+
 
 
 {% block content %}{% endblock %}
