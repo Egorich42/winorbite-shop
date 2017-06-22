@@ -520,6 +520,19 @@ nav ul li a:hover{text-decoration: none;}
 
 .commentary-disqus{width: 90%; margin-left: 5%;}
 
+
+
+.pay{width: 100%;}
+.payment{width: 50%; float: left; min-height: 500px;}
+
+
+
+
+
+
+
+
+
 /*------------MEDIA------------------------------*/
 
 
@@ -775,7 +788,6 @@ width: 70px;
 height: 70px; 
 margin: 15px;}
 
-.post-window{margin: 30px 0px;}
 
 tr{height: 100px;}
 
@@ -792,13 +804,20 @@ height: auto;
 }
 
 
+nav{width: 100%;}
+nav ul li{width: 100%;}
+nav ul li a{font-size: 32px;}
+
+nav ul li:first-child{border-top: solid;}
+nav ul li{border-bottom: solid; border-right: none; border-left: none;}
+
+
 }
 
 
 @media only screen and (max-device-width: 940px) {
 .about-class{margin: 20px 0px;}
 .about-class a{font-size: 28px;}
-
 
 
 
@@ -830,6 +849,13 @@ margin: 20px 0px;}
 
 .social-links{width: 79%;}
 
+
+
+
+
+
+.payment{width: 100%; float: none;}
+
 .about-class{
 width: 100%; 
 height: 50px;
@@ -851,6 +877,9 @@ width: 100%;
 .buttons-all { font-size: 1.4em;}
 
 }
+
+
+
 
 
 @media only screen and (max-device-width: 640px) {
