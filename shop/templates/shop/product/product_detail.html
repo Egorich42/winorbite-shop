@@ -16,13 +16,10 @@
 
         <section class="product-information">
           <h1>{{ product.name }}</h1>
-          
-          <!--h1>{{ product.category }}</h1>
-          <h1>{{ product_category }}</h1-->
 
           <section class="price-full-info">
-            <p class="price">{{ product.price }} руб.</p>
-                        <p class="price">{{ product.price_rub }} руб.</p>
+            <p class="price">{{ product.price }} &nbsp; бел.руб.</p>
+            <p class="price">{{ product.price_rub }} &nbsp; рос.руб.</p>
 
             <span class="parameters">{{product.parameter}} {{product.parameter_value}}</span>
             <p></p>
@@ -47,7 +44,7 @@
 
 
 
-<section class="blog-chained-posts"> 
+<!--section class="blog-chained-posts"> 
  {% for prod_chained in products %}
     <section class="chain-post">
      <article class="ramka">
@@ -59,7 +56,7 @@
        <p><a href="{{ product.get_post_url}}">{{prod_chained.name }}</a></p>
     </section>
   {% endfor %}
-</section>
+</section-->
 
 
 

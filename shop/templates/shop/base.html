@@ -77,22 +77,27 @@
   </section>
 
 <header>
-  <a href="/">
-    <img src="{% static "/LOGO3.png" %}" alt="logo" title="logo">
-  </a>
+
+<section class="logo">
+<a href="/"><img src="{% static "/logo-side.png" %}" alt="logo" title="logo"></a>
+</section>
 
 
-<nav>
-  <ul>
-    <li><a href="/blog/">блог</a></li>
+<nav class="box">
+
+ <div class="hidebutt2 top"></div>
+
+
+  <ul class="bottom" id="m_button">
+    <li style="border: none;"><a href="/blog/">блог</a></li>
     <li><a href="/shop/">магазин</a></li>
     <li><a  href="{% url "shop:contactList"%}">контакты</a></li>
     <li><a href="{% url "shop:paymentList"%}">доставка и оплата</a></li>
-  </ul> 
-</nav>
+    <li>
 
-<section class="social-links">
 
+    <section class="social-links">
+    <ul>
          <!--a href="#">
            <img src="/media/social-links/telegram.png"  title="Телеграм Орбиты"  alt="Telegram">
          </a-->
@@ -101,37 +106,35 @@
            <img src="/media/social-links/youtube.png" title="Наш youtube-канал, без стримов и летсплеев">
            </a-->
 
-         <a href="https://www.instagram.com/winorbite/">
+         <li> <a href="https://www.instagram.com/winorbite/">
            <img src="/media/social-links/Instagram.png" title="Наш инстаграм"  alt="Instagram"> 
-         </a>
+         </a></li>
 
-         <a href="https://twitter.com/winterorbite">
+         <li> <a href="https://twitter.com/winterorbite">
            <img src="/media/social-links/twitter.png" title="Орбита в Твиттере"  alt="Twitter">
-         </a>
+         </a></li>
 
-         <a href="https://www.facebook.com/groups/winorbite/">
+         <li> <a href="https://www.facebook.com/groups/winorbite/">
            <img src="/media/social-links/facebook.png" title="Мы в Facebook"  alt="Facebook">
-         </a>
+         </a></li>
 
-         <a href="https://vk.com/winorbite">
+         <li> <a href="https://vk.com/winorbite">
           <img src="/media/social-links/vk.png" title="Мы Вконтакте" alt="Vkontakte">
-         </a>
-
-
-         <!--section class="about-class">
-            <a  href="{% url "shop:paymentList"%}" class="head-butts" >доставка и оплата</a>
-
-            |
-            <a  href="{% url "shop:contactList"%}" class="head-butts" >наши контакты</a>
-         </section-->
-
+         </a></li>
+</ul>
     </section>
+
+    </li>
+  </ul> 
+</nav>
+
+
   <section class="main-menue">
     <section class="cart-head">
       {% with total_items=cart|length %}
           {% if cart|length > 0 %} 
             <a href="{% url "cart:CartDetail" %}">
-              <img src="/media/icons/cart.png" title="Корзина" alt="Корзина">
+              <img src="{% static "cart.png" %}" title="Корзина" alt="Корзина">
             </a>
 
               <p>

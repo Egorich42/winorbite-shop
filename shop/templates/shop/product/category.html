@@ -6,6 +6,8 @@
 {% block content %}
 <section class="main-list">
 
+
+
 <aside class="side-cat box">
 
  <div class="hidebutt top">Меню</div>
@@ -19,6 +21,10 @@
     {% endfor %}  
   </ul>
 </aside>
+
+
+
+
 
 <section class="products">
    {% for product in products %}
@@ -36,8 +42,8 @@
         </p>
         <span class="parameters">{{product.parameter}}</span>       
         <span class="parameters">{{product.parameter_value}} </span>
-        <p class = "price">{{ product.price }} руб.</p>
-        <p class = "price">{{ product.price_rub }} руб.</p>
+        <p class = "price">{{ product.price }} &nbsp;  бел.руб.</p>
+        <p class = "price">{{ product.price_rub }} &nbsp;  рос.руб.</p>
       </article>
 
     </section>
