@@ -172,7 +172,7 @@ color: #fff;
 background:linear-gradient(#656565, #444);
 text-shadow:0 1px 0 #2f2f2f;
 border:solid 1px #535353;
-font-size: 22px;
+font-size: 18px;
 }
 
 
@@ -1012,22 +1012,16 @@ padding: 20px 0px;
 }
 
 @media only screen and (max-device-width: 500px) {
-
-
-
 .order-form li img {
 width: 50px;
 }
-.hidebutt2 {
-margin-top: -80px;
-width: 80px;
-height: 65px;
-}
+
+
+.hidebutt2{margin-top: -270px;width: 270px;height: 245px;}
+
+
 .hide{margin-top: 80px;}
 nav ul li a{font-size: 2.7em}
-
-
-
 
 
 .title a {
@@ -1059,98 +1053,48 @@ font-size: 22px;
 }
 
 @media only screen and (max-device-width: 370px) {
+.background {top: 400px;}	
 
-
-.background {
-top: 400px;
-}	
-
-.full-description{
-font-size: 2.4em;	
-}
-
+.full-description{font-size: 2.4em;	}
 
 .blog-chained-posts{display: inline-block; }
 .chain-post{width: 100%; margin: 5% 0%; height: 100px; float: left;border: solid 2px #000;}
 .chain-post img{width: 90%; }
 
-footer{
-margin-top: 1400px; 
-font-size: 1.7em;
-}
+footer{margin-top: 1400px; font-size: 1.7em;}
 
+.full-post h1 { font-size: 4em; font-weight: bold; }
 
-.full-post h1 {
-font-size: 4em;
-font-weight: bold;
-}
+.order-form li img {width: 50px;}
 
-.order-form li img {
-width: 50px;
-}
+header {min-height: 120px;}
 
-
-header {
-min-height: 120px;
-}
-
-.cart-full-information {
-margin-left: 0%;
-width: 100%;
-}
-
+.cart-full-information {margin-left: 0%;width: 100%;}
 
 .order-form{width: 98%; padding-left: 2%;}
-
 .order-form ul {padding: 0px;}
 .order-form ul li{font-size: 1.2em;}
 
 
-.hidebutt2{
-margin-top: -170px;
-width: 170px;
-height: 145px;
-}
-
+.hidebutt2{margin-top: -170px;width: 170px;height: 145px;}
 
 .side-cat ul li{font-size: 4em;}
 
-.hidebutt2 ul{
-margin-top: 200px;
-}
+.hidebutt2 ul{margin-top: 200px;}
 
-.parameters,.price {
-font-size: 2em;
-}
+.parameters,
+.price {font-size: 2em;}
 
+.product-information {margin-top: 100px;}
 
-.product-information {
-margin-top: 100px;
-}
-
-.product-information h1{
-font-size: 2.5em;
-}
-
-
+.product-information h1{font-size: 2.5em;}
 .sales-buttons{margin-top: 200px;}
-
 .hide{margin-top: 200px;}
-
 .head-menu ul{margin-top: 100px;}
-
 .bottom li{font-size: 1.5em;}
-
 .bottom{margin-top: 100px;}
-
 .main-line{font-size: 7em; margin-top: 300px;}
-
-.buttons-all {
-font-size: 2.5em;
-padding: 20px 20px;
-margin-left: 100px;
-}
-
+.buttons-all {font-size: 2.5em;padding: 20px 20px;margin-left: 100px;}
 .cart tr td{font-size: 2em;}
 
 }
