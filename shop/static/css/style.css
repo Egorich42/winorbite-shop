@@ -162,6 +162,10 @@ margin:0px;
 padding:0px;
 }
 
+h4{
+font-weight: 600;
+}
+
 
 footer{
 width: 100%; 
@@ -835,7 +839,9 @@ tr{height: 100px;}
 
 /*footer {margin-top: 100px;}*/
 
-.chain-post p a{font-size: 18px;}
+.chain-post p a{
+font-size: 18px;
+}
 
 .blog-post-full {
 border: none;
@@ -846,17 +852,38 @@ height: auto;
 }
 
 
-.cart-head{width: auto;}
-.logo{width: 100%;}
-.social-links{width: 100%;}
+.cart-head{
+width: auto;
+}
 
-nav{width: 80%; float: left;}
+.logo{
+width: 100%;
+}
 
-nav ul{padding-left: 10px;}
+.social-links{
+width: 100%;
+}
 
-nav ul li{ border: none; text-align: left; float: left; width: 100%; margin-bottom: 10px;}
+nav{
+width: 80%; 
+float: left;
+}
 
-nav ul li a{font-size: 2.2em;}
+nav ul{
+padding-left: 10px;
+}
+
+nav ul li{ 
+border: none; 
+text-align: left; 
+float: left; 
+width: 100%; 
+margin-bottom: 10px;
+}
+
+nav ul li a{
+	font-size: 2.2em;
+}
 
 nav ul li img{}
 .hidebutt2 {

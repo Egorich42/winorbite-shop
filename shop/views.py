@@ -6,6 +6,8 @@ from cart.forms import CartAddProductForm
 from django.http import HttpResponse
 from django.template.defaultfilters import slugify
 from blog.models import Post
+from .values import *
+
 
 def main(request):
     categories = Category.objects.all()
@@ -53,11 +55,14 @@ def categoryList(request):
     return render(request, 'shop/shop_main.html',{'categories':categories, 'products':products})
 
 def paymentList(request):
-    return render(request, 'shop/singles/payment.html')
+    payment = payment_text[0] 
+    return render(request, 'shop/singles/payment.html',{'payment':payment})
 
 def contactList(request):
-    return render(request, 'shop/singles/contact.html')
+    contacts = contacts_text[0]
+    return render(request, 'shop/singles/contact.html',{'contacts':contacts})
 
 
 def privacy(request):
-    return render(request, 'shop/singles/privacy.html')
+    privacy = privacy_text[0]
+    return render(request, 'shop/singles/privacy.html',{'privacy':privacy})
