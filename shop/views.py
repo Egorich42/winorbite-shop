@@ -58,3 +58,6 @@ def paymentList(request):
 def contactList(request):
     return render(request, 'shop/singles/contact.html')
 
+
+def privacy(request):
+    return render(request, 'shop/singles/privacy.html')

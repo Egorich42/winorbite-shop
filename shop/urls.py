@@ -10,4 +10,6 @@ urlpatterns = [
     url(r'^(?P<id>\d+)/(?P<slug>[-\w]+)/$', views.ProductDetail, name='ProductDetail'),
     url(r'^about/contact/$', views.contactList, name='contactList'),
     url(r'^about/payment/$', views.paymentList, name='paymentList'),
+    url(r'^about/privacy/$', views.privacy, name='privacy'),
+
 ]
