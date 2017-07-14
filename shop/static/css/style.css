@@ -502,14 +502,29 @@ display: none;
 }
 
 
-.full-img{border: 1px solid #000; 
+.full-img{
+border: 1px solid #000; 
 max-width: 360px; 
-max-height: 500px;}
-.parameters{color: #000; 
-font-size: 16px;}
-.info{text-align: center;}
-.price{font-size: 1.3em;color:#000;}
+max-height: 500px;
+}
 
+
+.parameters{
+color: #000; 
+font-size: 16px;
+}
+
+
+.info{
+text-align: center;
+}
+
+
+.price{
+font-size: 1.3em;
+color:#000;
+font-family: Pepsy cyr-lat;
+}
 
 
 .post-title a {
@@ -519,14 +534,15 @@ font-weight: 700;
 }
 
 
+.logo{
+float: left;
+width: 20%;
+}
 
-
-
-
-
-.logo{float: left; width: 20%;}
-
-nav{width: 80%; float: left;}
+nav{
+width: 80%;
+float: left;
+}
 
 nav ul li {
 text-align: center;
