@@ -5,43 +5,31 @@
 {% endblock %}
 {% block content %}
 <section class="main-block">
-
-  <section class="main-list-full">
-
-
+<section class="main-list-full">
 <a href="/" class="top_link">главная</a>/<a href="/shop" class="top_link">магазин</a> 
-
-    <section class="parameters-window">
-        <img  src="{% if product.image %}{{ product.image.url }}{% else %}{% static "img/no-image.jpg"%}{% endif %}" class="full-img" alt="fullImage">
-
-        <section class="product-information">
-          <h1>{{ product.name }}</h1>
-
-          <section class="price-full-info">
-            <p class="price">{{ product.price }} &nbsp; <img src="{% static "b_flag.png" %}" alt="Беларуский рубль" title="Беларуский рубль" style="width: 40px;">
+<section class="parameters-window">
+<img  src="{% if product.image %}{{ product.image.url }}{% else %}{% static "img/no-image.jpg"%}{% endif %}" class="full-img" alt="fullImage">
+<section class="product-information">
+<h1>{{ product.name }}</h1>
+<section class="price-full-info">
+<p class="price">{{ product.price }} &nbsp; <img src="{% static "b_flag.png" %}" alt="Беларуский рубль" title="Беларуский рубль" style="width: 40px;">
  </p>
-            <p class="price">{{ product.price_rub }} &nbsp;<img src="{% static "r_flag.png" %}" alt="Российский рубль" title="Российский рубль" style="width: 40px;"></p>
-
-            <span class="parameters">{{product.parameter}} {{product.parameter_value}}</span>
-            <p></p>
-            <span class="parameters">{{product.second_parameter}} {{product.second_parameter_value}}</span>
-          </section>
-
-          <section class="form-price-info">
-
-            <form class="form-block" action="{% url "cart:CartAdd" product.id %}" method="post">
-              <span class="itemSum">{{ cart_product_form }}</span>
-              {% csrf_token %}
-
-              <section class="form-block">
-                 <input type="submit" value="Добавить в корзину" class="buttons-all">
-              </section>
-
-            </form>
-      
-          </section>
-        </section>
-    </section>
+<p class="price">{{ product.price_rub }} &nbsp;<img src="{% static "r_flag.png" %}" alt="Российский рубль" title="Российский рубль" style="width: 40px;"></p>
+<span class="parameters">{{product.parameter}} {{product.parameter_value}}</span>
+<p></p>
+<span class="parameters">{{product.second_parameter}} {{product.second_parameter_value}}</span>
+</section>
+<section class="form-price-info">
+<form class="form-block" action="{% url "cart:CartAdd" product.id %}" method="post">
+<span class="itemSum">{{ cart_product_form }}</span>
+{% csrf_token %}
+<section class="form-block">
+<input type="submit" value="Добавить в корзину" class="buttons-all">
+</section>
+</form>
+</section>
+</section>
+</section>
 
 
 
@@ -58,24 +46,17 @@
     </section>
   {% endfor %}
 </section-->
-
-
-
-
-     <div id="disqus_thread" style="width: 90%; margin-left: 5%;"></div>
-    <script id="dsq-count-scr" src="//http-winorbite-com.disqus.com/count.js" async></script>
-      <script>
-        (function() { 
-        var d = document, s = d.createElement('script');
-        s.src = '//http-winorbite-com.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-        })();
-      </script>
-     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-
-
-  </section>
+<div id="disqus_thread" style="width: 90%; margin-left: 5%;"></div>
+<script id="dsq-count-scr" src="//http-winorbite-com.disqus.com/count.js" async></script>
+<script>
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = '//http-winorbite-com.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
 </section>
 {% endblock %}

@@ -1,22 +1,18 @@
 {% extends "shop/base.html" %}
-
 {% block title %}
   | Оформление заказа
 {% endblock %}
-
 {% block content %}
-
 <section class="order-form">
- <h1>Оформление заказа</h1>
- <h2>Заполните форму</h2>
- <form class="order-form" action="." method="post">
-  {{ form.as_p }}
-  {% csrf_token %}
-   <p> 
-    <input type="submit" class="buttons-all"  value="Отправить">
-   </p>
- </form>
-
+<h1>Оформление заказа</h1>
+<h2>Заполните форму</h2>
+<form class="order-form" action="." method="post">
+{{ form.as_p }}
+{% csrf_token %}
+<p> 
+<input type="submit" class="buttons-all"  value="Отправить">
+</p>
+</form>
   <!--p>
     <div class="send-order">
       <h2>Ваш заказ</h2>
@@ -31,8 +27,6 @@
       </ul>
     </div>
   </p-->
-
-  <a href="/about/privacy" style="color: #000; ">Политика конфиденциальности</a>
-  
+<a href="/about/privacy" style="color: #000; ">Политика конфиденциальности</a>
 </section>
 {% endblock %}

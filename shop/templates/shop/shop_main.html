@@ -4,49 +4,37 @@
 | Магазин
 {% endblock %}
 {% block content %}
-
 <section class="main-list">
-
-  <aside class="side-cat box">
-    <div class="hidebutt top">Меню</div>
-      <ul class="bottom" id="m_button">  
-           {% for category in categories %}
-        <li>
-           <a href="{{category.slug}}">{{ category.name }}</a>
-        </li>
-           {% endfor %}
-      </ul>
-  </aside>
-
-
-    <section class="products">
-       {% for product in products %}
-
-        <section class="product-window">
-    
-          <article class = "image">
-            <a href="{{ product.get_absolute_url }}">
-              <img src="{{ product.image.url}}"  alt="product-image" >
-            </a>
-          </article>
-
-          <article class="info">
-            <p class="title">
-            <a href="{{ product.get_absolute_url }}">{{ product.name }}</a>
-            </p>
-            <span class="parameters">{{product.parameter}}</span>       
-            <span class="parameters">{{product.parameter_value}} </span>
-            <p class = "price">{{ product.price }} &nbsp; <img src="{% static "b_flag.png" %}" alt="Беларуский рубль" title="Беларуский рубль" style="width: 40px;"></p>
-            <p class = "price">{{ product.price_rub }}&nbsp; <img src="{% static "r_flag.png" %}" alt="Российский рубль" title="Российский рубль" style="width: 40px;"></p>
-          </article>
-
-        </section>
-
-      {% endfor %}
-
-    </section>
- 
+<aside class="side-cat box">
+<div class="hidebutt top">Меню</div>
+<ul class="bottom" id="m_button">  
+{% for category in categories %}
+<li>
+<a href="{{category.slug}}">{{ category.name }}</a>
+</li>
+{% endfor %}
+</ul>
+</aside>
+<section class="products">
+ {% for product in products %}
+<section class="product-window">
+<article class = "image">
+<a href="{{ product.get_absolute_url }}">
+<img src="{{ product.image.url}}"  alt="product-image" >
+</a>
+</article>
+<article class="info">
+<p class="title">
+<a href="{{ product.get_absolute_url }}">{{ product.name }}</a>
+</p>
+<span class="parameters">{{product.parameter}}</span>       
+<span class="parameters">{{product.parameter_value}} </span>
+<p class = "price">{{ product.price }} &nbsp; <img src="{% static "b_flag.png" %}" alt="Беларуский рубль" title="Беларуский рубль" style="width: 40px;"></p>
+<p class = "price">{{ product.price_rub }}&nbsp; <img src="{% static "r_flag.png" %}" alt="Российский рубль" title="Российский рубль" style="width: 40px;"></p>
+</article>
 </section>
-
+{% endfor %}
+</section> 
+</section>
 {% endblock %}
 

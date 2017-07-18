@@ -11,5 +11,4 @@ urlpatterns = [
     url(r'^about/contact/$', views.contactList, name='contactList'),
     url(r'^about/payment/$', views.paymentList, name='paymentList'),
     url(r'^about/privacy/$', views.privacy, name='privacy'),
-
 ]

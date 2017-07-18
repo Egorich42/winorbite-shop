@@ -66,3 +66,7 @@ def contactList(request):
 def privacy(request):
     privacy = privacy_text[0]
     return render(request, 'shop/singles/privacy.html',{'privacy':privacy})
+
+def robots(request):
+    return render_to_response('robots.txt', content_type="text/plain")
+

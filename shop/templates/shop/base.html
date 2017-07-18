@@ -2,29 +2,23 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <title>Зимняя орбита{% block title %}{% endblock %}</title>
+<title>Зимняя орбита{% block title %}{% endblock %}</title>
+<meta name="yandex-verification" content="7b226c052cc4cab5" />
 <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
 <meta name="robots" content="index, follow" /> 
 <meta name="robots" content="noyaca"/>
 <meta name="robots" content="noodp"/>
 <meta name="keywords" content="Winorbite.com, винорбит ком, winorbite com, winorbite, зимняя орбита, необычные подарки, подарки, гик, гики, интернет-магазин, доставка, почтой, Беларусь, Минск"/>
 <meta name="description" content="Лучший магазин гиковской атрибутики"/>
-<meta property="business:contact_data:email" content="winorbite@gamil.com"/>
+<meta property="business:contact_data:email" content="winorbite@gmail.com"/>
 <meta property="business:contact_data:phone_number" content="+375333516975"/>
 <meta property="business:contact_data:website" content="http://winorbite.com/"/>
-
 <meta property="og:title" content="Зимняя орбита| {% if post.name %}{{ post.name }}{% elif product.name %}{{product.name}}{%endif%}" /><meta property="og:type" content="website" />
 <meta property="og:url" content="http://winorbite.com/" />
-
 <meta property="og:image" content="{% if product.image %}{{ product.image.url }}{% elif post.image %}{{ post.image.url }}{% else %}{% static "/media/s-logo.png"%}{% endif %}"/>
-
-
-
 <link rel="stylesheet" href="{% static "/css/style.css" %}">
 <link rel="shortcut icon" href="/media/favicon.ico">
 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -37,7 +31,7 @@
 </script>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
-    (function (d, w, c) {
+(function (d, w, c) {
         (w[c] = w[c] || []).push(function() {
             try {
                 w.yaCounter42085784 = new Ya.Metrika({
@@ -61,116 +55,91 @@
         } else { f(); }
     })(document, window, "yandex_metrika_callbacks");
 </script>
-<noscript>
-
-<div>
-<img src="https://mc.yandex.ru/watch/42085784" style="position:absolute; left:-9999px;" alt="" />
-</div>
-
-</noscript>
 <!-- /Yandex.Metrika counter -->
 </head>
 <body>
 {% autoescape off %}
-  <section class="background">
-    <img src="{% static "back.png" %}" alt="background" title="background">
-  </section>
-
+<section class="background">
+<img src="{% static "back.png" %}" alt="background" title="background">
+</section>
 <header>
-
 <section class="logo">
 <a href="/"><img src="{% static "/logo-side.png" %}" alt="logo" title="logo"></a>
 </section>
-
-
 <nav class="box">
-
- <div class="hidebutt2 top"></div>
-
-
-  <ul class="bottom" id="m_button">
-    <li style="border: none;"><a href="/blog/">блог</a></li>
-    <li><a href="/shop/">магазин</a></li>
-    <li><a  href="{% url "shop:contactList"%}">контакты</a></li>
-    <li><a href="{% url "shop:paymentList"%}">доставка и оплата</a></li>
-    <li>
-
-
-    <section class="social-links">
-    <ul>
-         <!--a href="#">
-           <img src="/media/social-links/telegram.png"  title="Телеграм Орбиты"  alt="Telegram">
-         </a-->
-
-         <!--a href="https://www.youtube.com/channel/UCe3sWFao-o1cRnKof7HynfQ">
-           <img src="/media/social-links/youtube.png" title="Наш youtube-канал, без стримов и летсплеев">
-           </a-->
-
-         <li> <a href="https://www.instagram.com/winorbite/">
-           <img src="/media/social-links/Instagram.png" title="Наш инстаграм"  alt="Instagram"> 
-         </a></li>
-
-         <li> <a href="https://twitter.com/winterorbite">
-           <img src="/media/social-links/twitter.png" title="Орбита в Твиттере"  alt="Twitter">
-         </a></li>
-
-         <li> <a href="https://www.facebook.com/groups/winorbite/">
-           <img src="/media/social-links/facebook.png" title="Мы в Facebook"  alt="Facebook">
-         </a></li>
-
-         <li> <a href="https://vk.com/winorbite">
-          <img src="/media/social-links/vk.png" title="Мы Вконтакте" alt="Vkontakte">
-         </a></li>
+<div class="hidebutt2 top"></div>
+<ul class="bottom" id="m_button">
+<li style="border: none;"><a href="/blog/">блог</a></li>
+<li><a href="/shop/">магазин</a></li>
+<li><a  href="{% url "shop:contactList"%}">контакты</a></li>
+<li><a href="{% url "shop:paymentList"%}">доставка и оплата</a></li>
+<li>
+<section class="social-links">
+<ul>
+<!--a href="#">
+<img src="/media/social-links/telegram.png"  title="Телеграм Орбиты"  alt="Telegram">
+</a-->
+<!--a href="https://www.youtube.com/channel/UCe3sWFao-o1cRnKof7HynfQ">
+  <img src="/media/social-links/youtube.png" title="Наш youtube-канал, без стримов и летсплеев">
+  </a-->
+<li> <a href="https://www.instagram.com/winorbite/">
+<img src="/media/social-links/Instagram.png" title="Наш инстаграм"  alt="Instagram"> 
+</a></li>
+<li> <a href="https://twitter.com/winterorbite">
+<img src="/media/social-links/twitter.png" title="Орбита в Твиттере"  alt="Twitter">
+</a></li>
+<li> <a href="https://www.facebook.com/groups/winorbite/">
+<img src="/media/social-links/facebook.png" title="Мы в Facebook"  alt="Facebook">
+</a></li>
+<li> <a href="https://vk.com/winorbite">
+<img src="/media/social-links/vk.png" title="Мы Вконтакте" alt="Vkontakte">
+</a></li>
 </ul>
-    </section>
-
-    </li>
-  </ul> 
+</section>
+</li>
+</ul> 
 </nav>
-
-
-  <section class="main-menue">
-    <section class="cart-head">
-      {% with total_items=cart|length %}
-          {% if cart|length > 0 %} 
-            <a href="{% url "cart:CartDetail" %}">
-              <img src="{% static "cart.png" %}" title="Корзина" alt="Корзина">
-            </a>
-
-              <p>
-                <a href="{% url "cart:CartDetail" %}" class="cart-link">
-                  {{ total_items }} <!--тов. {{ cart.get_total_price }} руб.-->
-                </a>
-              </p>
-           {% else %}
-          {% endif %}
-      {% endwith %}
-    </section>
-
-  </section>
-
+<section class="main-menue">
+<section class="cart-head">
+{% with total_items=cart|length %}
+{% if cart|length > 0 %} 
+<a href="{% url "cart:CartDetail" %}">
+<img src="{% static "cart.png" %}" title="Корзина" alt="Корзина">
+</a>
+<p>
+<a href="{% url "cart:CartDetail" %}" class="cart-link">
+{{ total_items }} <!--тов. {{ cart.get_total_price }} руб.-->
+</a>
+</p>
+{% else %}
+{% endif %}
+{% endwith %}
+</section>
+</section>
 </header>
-
 {% block content %}{% endblock %}
-
 <footer>
-
- <p>"Зимняя Орбита"</p>
- <p>Copyright 2017</p>
-<p style="font-size: 12px; padding: 0px; margin: 0px;">Юр. адрес:  г. Минск, пер. Козлова, 7/г,  каб.501, номер в реестре - 190530248</p>
-
+<p>"Зимняя Орбита"</p>
+<p>Copyright 2017</p>
+<p style="font-size: 10px; padding: 0px; margin: 0px;">юр. адрес:  г. Минск, пер. Козлова, 7/г,  каб.501, номер в реестре - 190530248</p>
 </footer>
-
 {% endautoescape %}
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="{% static "/JS/script.js" %}"></script>
-<script type="text/javascript">
+<script>
 if (document.documentElement.clientWidth <1134){
 var x = document.getElementById("m_button"); 
 x.style.display = "none";
 }
+
+$('.top').on('click', function() {
+  $parent_box = $(this).closest('.box');
+  $parent_box.siblings().find('.bottom').slideUp();
+  $parent_box.find('.bottom').slideToggle(300, 'swing');
+});
+
 </script>
+
+
 </body>
 </html>
