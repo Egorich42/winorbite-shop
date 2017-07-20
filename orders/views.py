@@ -6,6 +6,7 @@ from cart.cart import Cart
 from django.shortcuts import render
 from django.core.mail import send_mail, send_mass_mail
 from .values import *
+import vk
 
 def OrderCreate(request):
     cart = Cart(request)
@@ -22,6 +23,7 @@ def OrderCreate(request):
                     +str(order.email)
                     +str(order.created),
                     from_who, clients)
+            
 
             for item in cart:
                 OrderItem.objects.create(order=order, product=item['product'],

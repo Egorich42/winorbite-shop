@@ -11,5 +11,8 @@ egor = vk_api.users.get(user_id=31383913)
 glic = vk_api.users.getFollowers(user_id=31383913, count=2, fields = 'photo_50')
 groups = vk_api.users.getSubscriptions(extended=1, count=2, fields='name')
 #vk_api.wall.post(users_id=0,  message="hello")
-vk_api.wall.post(owner_id=-140316393,attachments='http://winorbite.com/blog/Injustice2-story/', message="Написал тут про игоры",from_group=1,signed=1)
+
+alpha = 'http://winorbite.com/blog/Injustice2-story/'
+beta = "Написал тут про игоры"
+vk_api.wall.post(owner_id=-140316393,attachments=alpha, message=beta,from_group=1,signed=1)
 
