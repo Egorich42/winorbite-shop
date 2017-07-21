@@ -138,8 +138,6 @@ font-family:Pepsy cyr-lat;
 
 .social-links ul li,
 .logo,
-.product-window,
-.side-cat,
 .chain-post,
 .about-links li,
 .cart-head,
@@ -346,8 +344,9 @@ width:80%;
 
 .product-window{
 border:solid 1px #000;
-margin:18px; 
-height: 310px; 
+margin:15px; 
+height: 340px; 
+width: 21%;
 }
 
 .product-window img{
@@ -545,7 +544,7 @@ position:fixed;
 }
 
 .products{
-width: 79%; 
+width: 85%; 
 display: inline-block; 
 text-align: center;
 }
@@ -567,10 +566,9 @@ max-height: 500px;
 
 .parameters{font-size: 16px;}
 .info{text-align: center;}
-.price{font-size: 1.3em;}
+.price{font-size: 1em;}
 
 .price{font-family: Pepsy cyr-lat;}
-
 .post-title a {
 font-size: 18px;
 font-weight: 700;
@@ -598,9 +596,13 @@ margin-left: 5%;
 width: 50%;
 min-height: 500px;
 }
-
-}
-
+.side-cat{width: 14%;}
+.miniprice{width: 50%; float: left;}
+.miniprice img{width: 22%;float: left;}
+.price_im{width: 25px;float: right;}
+.span_pr{width: 40px;float: left;}
+.minip{float: left;}
+.minip-full{font-size: 2em}
 /*------------MEDIA------------------------------*/
 @media only screen and (max-device-width: 1920px) {
 .main-tagline{

@@ -12,9 +12,9 @@
 <section class="product-information">
 <h1>{{ product.name }}</h1>
 <section class="price-full-info">
-<p class="price">{{ product.price }} &nbsp; <img src="{% static "b_flag.png" %}" alt="Беларуский рубль" title="Беларуский рубль" style="width: 40px;">
+<p class="price miniprice"><span class="minip-full">{{ product.price }}P</span> &nbsp; <img src="{% static "b_flag.png" %}" alt="Беларуский рубль" title="Беларуский рубль" >
  </p>
-<p class="price">{{ product.price_rub }} &nbsp;<img src="{% static "r_flag.png" %}" alt="Российский рубль" title="Российский рубль" style="width: 40px;"></p>
+<p class="price miniprice" ><span class="minip-full">{{ product.price_rub }}P</span> &nbsp;<img src="{% static "r_flag.png" %}" alt="Российский рубль" title="Российский рубль"></p>
 <span class="parameters">{{product.parameter}} {{product.parameter_value}}</span>
 <p></p>
 <span class="parameters">{{product.second_parameter}} {{product.second_parameter_value}}</span>
