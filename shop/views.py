@@ -6,7 +6,6 @@ from cart.forms import CartAddProductForm
 from django.http import HttpResponse
 from django.template.defaultfilters import slugify
 from blog.models import Post
-from .values import *
 
 
 def main(request):

@@ -5,7 +5,6 @@ from .forms import *
 from cart.cart import Cart
 from django.shortcuts import render
 from django.core.mail import send_mail, send_mass_mail
-from .values import *
 import vk
 
 def OrderCreate(request):

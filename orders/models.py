@@ -35,3 +35,7 @@ class OrderItem(models.Model):
 
     def get_cost(self):
         return self.price * self.quantity
+
+        
+clients = ['e.g.hutter@gmail.com','zonaegora@gmail.com']
+from_who = 'e.g.hutter@gmail.com'
