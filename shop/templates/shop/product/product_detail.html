@@ -6,18 +6,20 @@
 {% block content %}
 <section class="main-block">
 <section class="main-list-full">
-<a href="/" class="top_link">главная</a>/<a href="/shop" class="top_link">магазин</a> 
 <section class="parameters-window">
 <img  src="{% if product.image %}{{ product.image.url }}{% else %}{% static "img/no-image.jpg"%}{% endif %}" class="full-img" alt="fullImage">
 <section class="product-information">
 <h1>{{ product.name }}</h1>
 <section class="price-full-info">
-<p class="price miniprice"><span class="minip-full">{{ product.price }}P</span> &nbsp; <img src="{% static "b_flag.png" %}" alt="Беларуский рубль" title="Беларуский рубль" >
- </p>
-<p class="price miniprice" ><span class="minip-full">{{ product.price_rub }}P</span> &nbsp;<img src="{% static "r_flag.png" %}" alt="Российский рубль" title="Российский рубль"></p>
+
 <span class="parameters">{{product.parameter}} {{product.parameter_value}}</span>
 <p></p>
-<span class="parameters">{{product.second_parameter}} {{product.second_parameter_value}}</span>
+
+
+<p class="price fullprice" >
+<span>{{ product.price_rub }}&nbsp;&nbsp;P</span> 
+<img src="{% static "r_flag.png" %}" alt="Российский рубль" title="Российский рубль">
+</p>
 </section>
 <section class="form-price-info">
 <form class="form-block" action="{% url "cart:CartAdd" product.id %}" method="post">

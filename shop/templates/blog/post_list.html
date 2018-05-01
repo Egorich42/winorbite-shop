@@ -9,10 +9,12 @@
 <section class="post-window">
 <section class="blog-image">
 <a href="{{post.get_post_url }}">
+
 <img src="{% if post.image %}{{ post.image.url }}{% else %}{% static "img/no-image.jpg"%}{% endif %}" class="img-responsive" alt="post-image">
 </a>
+
 </section>
-<p class="post-title"><a href="{{ post.get_post_url}}">{{post.name }}</a></p>
+<article class="post-title"><a href="{{ post.get_post_url}}">{{post.name }}</a></article>
 </section>
 {% endfor %}
 </section>

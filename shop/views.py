@@ -6,6 +6,7 @@ from cart.forms import CartAddProductForm
 from django.http import HttpResponse
 from django.template.defaultfilters import slugify
 from blog.models import Post
+from .values import *
 
 
 def main(request):
@@ -66,6 +67,7 @@ def privacy(request):
     privacy = privacy_text[0]
     return render(request, 'shop/singles/privacy.html',{'privacy':privacy})
 
-def robots(request):
-    return render_to_response('robots.txt', content_type="text/plain")
+
+#def robots(request):
+#    return render_to_response('robots.txt', content_type="text/plain")
 

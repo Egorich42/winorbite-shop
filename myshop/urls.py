@@ -11,9 +11,9 @@ urlpatterns = [
     url(r'^order/', include('orders.urls', namespace='orders')),
     url(r'^', include('shop.urls', namespace='shop')),
     url(r'^blog/', include('blog.urls', namespace='blog')),
+ 
  #   url(r'^CMR/', include('CMR.urls', namespace='CMR')),
 #    url(r'^data/', include('data.urls', namespace='data')),
-#    url(r'^users/', include('users.urls', namespace='users')),
 
 ]
 

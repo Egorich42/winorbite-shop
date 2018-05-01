@@ -5,48 +5,6 @@
 {% endblock %}
 {% block content %}
 
-<!--section class="main-tagline">
-  <h1>"Зимняя орбита"</h1>
-  <h2>Сделано гиками  - и для гиков!</h2>
-  <h2>Доставка гиковских вещиц на территории России, Беларуси и Украины</h2>
-
-
-  {% for post in posts %}
-    <section class="main-tagline-blog">
-     <a href="{{post.get_post_url }}">
-       <img src="{% if post.image %}{{ post.image.url }}{% else %}{% static "img/no-image.jpg"%}{% endif %}" class="img-responsive" alt="post-image">
-      </a>
-       <p class="post-title"><a href="{{ post.get_post_url}}">{{post.name }}</a></p>
-    </section>
-  {% endfor %}
-
-
-
- {% for product in products %}
-    <section class="main-tagline-product">
-    
-      <article class = "image">
-        <a href="{{ product.get_absolute_url }}">
-          <img src="{{ product.image.url}}"  alt="product-image" >
-        </a>
-      </article>
-
-      <article class="info">
-        <p class="title">
-        <a href="{{ product.get_absolute_url }}">{{ product.name }}</a>
-        </p>
-        <span class="parameters">{{product.parameter}}</span>       
-        <span class="parameters">{{product.parameter_value}} </span>
-        <p class = "price">{{ product.price }} руб.</p>
-      </article>
-
-    </section>
-
-  {% endfor %}
-
-
-</section-->
-
 <section class = "main-line">
 <a href="/blog/"> Блог</a> / <a href="/shop/">Магазин</a>
 </section>

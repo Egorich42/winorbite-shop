@@ -19,7 +19,7 @@ EMAIL_HOST_USER = "e.g.hutter@gmail.com"
 EMAIL_HOST_PASSWORD = "atlantishearth198622"
 EMAIL_USE_TLS = True
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['.winorbite.com']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -32,9 +32,6 @@ INSTALLED_APPS = [
     'cart',
     'orders',
     'blog',
- #   'data',
-#    'CMR',
-#    'users',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -107,6 +104,10 @@ LANGUAGE_CODE = 'en-us'
 STATIC_URL = '/static/'
 
 MEDIA_URL = '/media/'
+#/winorbite.com/django/winterorbite/media
+#/django/winterorbite/media
+#/winterorbite/media
+
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 

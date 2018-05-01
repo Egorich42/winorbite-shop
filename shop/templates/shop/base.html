@@ -17,8 +17,9 @@
 <meta property="og:url" content="http://winorbite.com/" />
 <meta property="og:image" content="{% if product.image %}{{ product.image.url }}{% elif post.image %}{{ post.image.url }}{% else %}{% static "/media/s-logo.png"%}{% endif %}"/>
 <link rel="stylesheet" href="{% static "/css/style.css" %}">
+<link rel="stylesheet" href="{% static "/css/media-style.css" %}">
+
 <link rel="shortcut icon" href="/media/favicon.ico">
-<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -57,45 +58,28 @@ d.addEventListener("DOMContentLoaded", f, false);
 <body>
 {% autoescape off %}
 <section class="background">
-<img src="{% static "back.png" %}" alt="background" title="background">
+<img src="{% static "back.jpg" %}" alt="background" title="background">
 </section>
 <header>
-<section class="logo">
-<a href="/"><img src="{% static "/logo-side.jpeg" %}" alt="logo" title="logo"></a>
-</section>
-<nav class="box">
-<div class="hidebutt2 top"></div>
-<ul class="bottom" id="m_button">
-<li style="border: none;"><a href="/blog/">блог</a></li>
-<li><a href="/shop/">магазин</a></li>
-<li><a  href="{% url "shop:contactList"%}">контакты</a></li>
-<li><a href="{% url "shop:paymentList"%}">доставка и оплата</a></li>
-<li>
-<section class="social-links">
-<ul>
-<!--a href="#">
-<img src="/media/social-links/telegram.png"  title="Телеграм Орбиты"  alt="Telegram">
-</a-->
-<!--a href="https://www.youtube.com/channel/UCe3sWFao-o1cRnKof7HynfQ">
-  <img src="/media/social-links/youtube.png" title="Наш youtube-канал, без стримов и летсплеев">
-  </a-->
-<li> <a href="https://www.instagram.com/winorbite/">
-<img src="/media/social-links/Instagram.png" title="Наш инстаграм"  alt="Instagram"> 
-</a></li>
-<li> <a href="https://twitter.com/winterorbite">
-<img src="/media/social-links/twitter.png" title="Орбита в Твиттере"  alt="Twitter">
-</a></li>
-<li> <a href="https://www.facebook.com/groups/winorbite/">
-<img src="/media/social-links/facebook.png" title="Мы в Facebook"  alt="Facebook">
-</a></li>
-<li> <a href="https://vk.com/winorbite">
-<img src="/media/social-links/vk.png" title="Мы Вконтакте" alt="Vkontakte">
-</a></li>
-</ul>
-</section>
-</li>
-</ul> 
+
+
+
+<nav id="menu">
+	<ul>
+	<a class="closebtn" id="close-menu" style="color: #818181; ">&times;</a>
+	  <li><a href="/">главная</a></li>
+	  <li><a href="/blog/">блог</a></li>
+	  <li><a href="/shop/">магазин</a></li>
+	  <li><a  href="{% url "shop:contactList"%}">контакты</a></li>
+	  <li><a href="{% url "shop:paymentList"%}">доставка и оплата</a></li>
+	</ul> 
 </nav>
+<span id="show-menu">&#9776;</span>
+
+
+
+
+
 <section class="main-menue">
 <section class="cart-head">
 {% with total_items=cart|length %}
@@ -121,19 +105,7 @@ d.addEventListener("DOMContentLoaded", f, false);
 <p style="font-size: 10px; padding: 0px; margin: 0px;">юр. адрес:  г. Минск, пер. Козлова, 7/г,  каб.501, номер в реестре - 190530248</p>
 </footer>
 {% endautoescape %}
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script>
-if (document.documentElement.clientWidth <1134){
-var x = document.getElementById("m_button"); 
-x.style.display = "none";
-}
+<script src="{% static "JS/script.js" %}"></script>
 
-$('.top').on('click', function() {
-$parent_box = $(this).closest('.box');
-$parent_box.siblings().find('.bottom').slideUp();
-$parent_box.find('.bottom').slideToggle(300, 'swing');
-});
-</script>
 </body>
 </html>

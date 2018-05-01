@@ -47,14 +47,7 @@ class Cart(object):
 
         for item in self.cart.values():
             item['price'] = Decimal(item['price'])
-
-#           item_rub['price_rub'] = Decimal(item['price_rub'])
-
             item['total_price'] = item['price'] * item['quantity']
-
-
-#            item_rub['total_price_rub'] = item_rub['price_rub'] * item['quantity']
-
             yield item
 
 
