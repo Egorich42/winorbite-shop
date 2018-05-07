@@ -124,4 +124,14 @@ footer{background-color: #235D79; background: #235D79;}
 
 .closebtn, #show-menu{visibility: hidden;width: 0px; height: 0px;}
 
+
+.pay-and-delivery{padding: 0% 30%; }
+.pay-and-delivery h2{text-align: center;}
+.pay-and-delivery article ul{margin: 0px; padding:0px;}
+
+.contacts{text-align: center; font-size: 26px; padding: 0% 30%;}
+.image{height: 215px;}
+.parameters-window{
+padding: 0px; 
+justify-content: space-between;}
 }

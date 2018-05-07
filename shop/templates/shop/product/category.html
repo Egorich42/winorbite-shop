@@ -16,24 +16,23 @@
 </ul>
 </aside>
 <section class="products">
+
+
 {% for product in products %}
 <section class="product-window">
-<article class = "image">
-<a href="{{ product.get_absolute_url }}">
-<img src="{{ product.image.url}}"  alt="product-image" >
- </a>
-</article>
-<article class="info">
-<p class="title">
-<a href="{{ product.get_absolute_url }}">{{ product.name }}</a>
-</p>
-
-<p class = "price miniprice">
-<span class="minip">{{ product.price_rub }}p.</span>&nbsp; 
-</p>
-</article>
+  <article class = "image">
+    <a href="{{ product.get_absolute_url }}">
+    <img src="{{ product.image.url}}"  alt="product-image" >
+    </a>
+  </article>
+  <article class="info">
+	<span><a href="{{ product.get_absolute_url }}">{{ product.name }}</a></span>
+	<span class="minip">{{ product.price_rub }}p.</span>&nbsp; 
+  </article>
 </section>
 {% endfor %}
+
+
 </section>
 </section>
 {% endblock %}

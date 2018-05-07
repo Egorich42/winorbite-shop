@@ -5,40 +5,36 @@
 {% endblock %}
 {% block content %}
 <section class="main-list">
-<aside class="side-cat box">
-<div class="hidebutt top">Меню</div>
-<ul class="bottom" id="m_button">  
-{% for category in categories %}
-<li>
-<a href="{{category.slug}}">{{ category.name }}</a>
-</li>
-{% endfor %}
+
+
+  <aside class="side-cat box">
+	<div class="hidebutt top">Меню</div>
+	<ul class="bottom" id="m_button">  
+	{% for category in categories %}
+	  <li>
+	    <a href="{{category.slug}}">{{ category.name }}</a>
+	  </li>
+	{% endfor %}
 </ul>
 </aside>
+
+
 <section class="products">
- {% for product in products %}
+{% for product in products %}
 <section class="product-window">
-<article class = "image">
-<a href="{{ product.get_absolute_url }}">
-<img src="{{ product.image.url}}"  alt="product-image" >
-</a>
-</article>
-<article class="info">
-<p class="title">
-<a href="{{ product.get_absolute_url }}">{{ product.name }}</a>
-</p>
-<p class = "price miniprice">
-<span class="minip">{{ product.price }}p.</span>&nbsp; 
-<img src="{% static "b_flag.png" %}" alt="Беларуский рубль" title="Беларуский рубль" class="price_im">
-</p>
-<p class = "price miniprice">
-<span class="minip">{{ product.price_rub }}p.</span>&nbsp; 
-<img src="{% static "r_flag.png" %}" alt="Российский рубль" title="Российский рубль"  class="price_im">
-</p>
-</article>
+  <article class = "image">
+    <a href="{{ product.get_absolute_url }}">
+    <img src="{{ product.image.url}}"  alt="product-image" >
+    </a>
+  </article>
+  <article class="info">
+	<span><a href="{{ product.get_absolute_url }}">{{ product.name }}</a></span>
+	<span class="minip">{{ product.price_rub }}p.</span>&nbsp; 
+  </article>
 </section>
 {% endfor %}
 </section> 
+
 </section>
 {% endblock %}
 

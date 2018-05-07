@@ -1080,3 +1080,13 @@ header {min-height: 120px;}
 
 .side-cat ul li{font-size: 4em;}
 }
+
+
+/*---NEW-----------*/
+.info{display: flex; flex-direction: column; cursor:pointer; align-items: center;}
+.image{overflow: hidden;width: 100%;}
+.image a img{width: 150%;}
+.product-window{padding: 0px;}
+.contacts ul li{display: flex; justify-content: space-between;align-items: center; margin-top: 25px;}
+.parameters-window{display: flex;}
+.price-full-info{display: flex; flex-direction: column;}
