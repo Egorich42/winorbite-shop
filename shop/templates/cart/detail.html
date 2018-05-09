@@ -4,41 +4,46 @@
 {% endblock %}
 {% block content %}
 <section class="cart-full-information">
-<table class="cart">
-<tbody>
+
+
+<section class="cart">
+
+
 {% for item in cart %}
 {% with product=item.product %}
-<tr>
-<td class="cartimg">
-<a href="{{ product.get_absolute_url }}">
-<article class="cart-img">
-<p class ="cartimg">
-<img  src="{{ product.image.url }}" / alt ="product-image">
-</p>
-</article>
-</a>
-</td>
-<td>{{ product.name }}</td>
-<td>
-<form action="{% url "cart:CartAdd" product.id %}" method="post" class="add">
-{{ item.update_quantity_form.quantity }}
-{{ item.update_quantity_form.update }}
-{% csrf_token %}
-<input type="submit" value="Обновить" class="buttons-all" style="padding: 5px; font-size: 14px; width: 50%; margin-top: 0px;">
-</form>
-</td>
-<td>
-<a href="{% url "cart:CartRemove" product.id %}" style="padding: 5px; font-size: 14px;" class="buttons-all">Удалить</a>
-</td>
-<td class="num">{{ item.total_price }} руб.</td>
-</tr>
+
+<article style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
+
+  <article style="display: flex; flex-direction: column;">
+	<a href="{{ product.get_absolute_url }}">
+	  <img  src="{{ product.image.url }}" / alt ="product-image" style="width: 150px;">
+	</a>
+	<span>{{ product.name }}</span>
+  </article>
+
+
+  <form action="{% url "cart:CartAdd" product.id %}" method="post" class="add">
+	{{ item.update_quantity_form.quantity }}
+	{{ item.update_quantity_form.update }}
+	{% csrf_token %}
+	<input type="submit" value="Обновить" class="cart-button">
+  </form>
+
+
+
+<button href="{% url "cart:CartRemove" product.id %}"  class="cart-button">Удалить</button>
+<span>{{ item.total_price }} руб.</span>
 {% endwith %}
 {% endfor %}
-</tbody>
-</table>
-<p class="sales-buttons">
+
+
+</article>
+
+<article>
 <a href="/shop" class="buttons-all">Продолжить выбирать</a>
 <a href="{% url "orders:OrderCreate" %}"  class="buttons-all">Оформить заказ</a>
-</p>
+</article>
+
+</section>
 </section>
 {% endblock %}

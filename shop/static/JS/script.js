@@ -21,6 +21,19 @@ if (page_width <= 1080) {
 
 
 
+$(document).ready(function(){
+	var total = $(".product-window").length;
+	if (total < 16) {$("#show-more").hide();}
+	var startShow = 0;
+	var endShow = 16;
+	  $(".product-window").slice(endShow).hide();
+	  $("#show-more").click(function(){
+	  endShow += 8;
+	  $(".product-window").slice(0, endShow).slideDown();
+	  $(".product-window").slice(endShow).hide();
+	})
+
+})
 
 
 
