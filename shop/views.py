@@ -9,15 +9,6 @@ from blog.models import Post
 from .values import *
 
 
-def main(request):
-    categories = Category.objects.all()
-    products = Product.objects.all().order_by('id')[:2]
-    posts = Post.objects.all().order_by('id')[:1]
-    
-    return render_to_response('shop/product/main.html', {
-        'categories': categories,'products': products, 'posts': posts,
-        })
-
 
 def category(request, category_name_slug):
     context_dict = {}

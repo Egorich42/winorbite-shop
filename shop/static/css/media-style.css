@@ -16,7 +16,9 @@ visibility: hidden;
 transition: 0.7s;
 overflow-x: hidden;
 } 
-
+header {
+    min-height: auto;
+}
 nav ul li a {
 padding: 8px 8px 8px 32px;
 text-decoration: none;
@@ -28,7 +30,11 @@ nav ul li a:hover {
 color: #f1f1f1;
 }
 
+.background {opacity: 0;}
+.contacts{margin: 0% 10%;padding: 2%;}
+.contacts h1{text-align: center; font-size: 36px;}
 
+.contacts ul li span{font-size: 32px;}
 
 .closebtn {
 position: absolute;
@@ -37,13 +43,41 @@ right: 25px;
 font-size: 36px;
 margin-left: 50px;
 }
+.info{height: 20%; width: 100%; padding-left: 30px;}
+.image{height: 80%;}
+.product-window{height: 500px;}
+
+.info span{font-size: 20px;}
+#show-menu{font-size: 77px;}
+}
+@media screen and (min-width: 940px) {
+
 
 }
 
-@media screen and (min-width: 1136px) {
 
-header{min-height: auto; }
-footer{margin: 0px; border:none;  bottom: 0px;}	
+
+@media screen and (min-width: 1080px) {
+.price-full-info {align-items: center; font-size: 25px;}
+.form-price-info{margin: 0% 10%;}
+
+.product-window{width: 45%; margin: 1%;}
+.products{justify-content: center;}
+.product-information h1{text-align: center; padding: 0px; margin: 0px;}
+}
+
+
+@media screen and (min-width: 1136px) {
+.product-window{width: 25%; margin: 15px; height: 415px;}
+.info {height: 40%;width: auto;padding: auto;padding-left: 0px;}
+.full-post h1{font-size: 26px;}
+.info span {text-align: left;padding-left: 15px;}
+
+.background {opacity: 0.025;}
+.image{height: 60%;}
+
+header{min-height: 200px}
+footer{ border:none;  bottom: 0px;}	
 
 .blog-post-list {margin: 0px 10%;}
 
@@ -130,7 +164,6 @@ footer{background-color: #235D79; background: #235D79;}
 .pay-and-delivery article ul{margin: 0px; padding:0px;}
 
 .contacts{text-align: center; font-size: 26px; }
-.image{height: 215px;}
 .parameters-window{
 padding: 0px; 
 justify-content: space-between;}

@@ -11,8 +11,7 @@ var menu = document.getElementById('menu');
 
 var page_width = document.documentElement.clientWidth || document.documentElement.scrollWidth
 
-
-
+console.log(page_width)
 if (page_width <= 1080) {
   show_menu.addEventListener('click', function (){menu.classList.add("slider-show");menu.classList.remove("slider-close");})
   close_menu.addEventListener('click', function() {menu.classList.add("slider-close");menu.classList.remove("slider-show");})	
