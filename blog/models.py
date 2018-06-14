@@ -17,7 +17,6 @@ class Post(models.Model):
         verbose_name_plural = 'Статьи'
 
     def get_post_url(self):
-        print('get url')
         return reverse('blog:post_detail', args=[self.slug])
 
     def __unicode__(self):
