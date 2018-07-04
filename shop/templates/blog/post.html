@@ -5,31 +5,22 @@
 {% endblock %}
 {% block content %}
 <section class="blog-post-full">
-<article class="top_link">
-</article>
+
+
+
+
+
 <section class="full-post">
 <h1>{{ post.name }}</h1>    
 <img  src="{% if post.image %}{{ post.image.url }}{% else %}{% static "img/no-image.jpg"%}{% endif %}" class="post-info"  alt="fullImage"/>    
 <h2>{{post.short_description}}</h2>   
 <section class="full-description" style="padding-right: 0px;">
 {{post.story|safe}}
-<section class="blog-chained-posts"> 
-
-<!--
-{% for post in posts %}
-<section class="chain-post">
-<article class="ramka">
-<a href="{{post.get_post_url }}">
-<img src="{% if post.image %}{{ post.image.url }}{% else %}{% static "img/no-image.jpg"%}{% endif %}" class="img-responsive" alt="post-image">
-</a>
-</article>
- <p><a href="{{ post.get_post_url}}">{{post.name }}</a></p>
-</section>
-{% endfor %}
--->
 
 
-</section>
+
+
+
 <div id="disqus_thread" style="width: 90%; margin-left: 5%;"></div>
  <script id="dsq-count-scr" src="//http-winorbite-com.disqus.com/count.js" async></script>
 <script>
@@ -43,5 +34,17 @@ s.setAttribute('data-timestamp', +new Date());
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </section>
 </section>
+
+<aside>
+{% for post in posts %}
+<article>
+<a href="{{post.get_post_url }}">
+<img src="{% if post.image %}{{ post.image.url }}{% else %}{% static "img/no-image.jpg"%}{% endif %}" class="img-responsive" alt="post-image">
+</a>
+ <p><a href="{{ post.get_post_url}}">{{post.name }}</a></p>
+ </article>
+{% endfor %}	
+</aside>
+
 </section>
 {% endblock %}

@@ -69,36 +69,9 @@ d.addEventListener("DOMContentLoaded", f, false);
 
 <nav>
 	<ul>
-	<a class="closebtn" id="close-menu" style="color: #818181; ">&times;</a>
 	  <li><a href="/">Зимняя Орбита</a><p>Блог гика и для гиков</p></li>
-	  <!--li><a href="/shop/">магазин</a></li>
-	  <li><a  href="{% url "shop:contactList"%}">контакты</a></li>
-	  <li><a href="{% url "shop:paymentList"%}">доставка и оплата</a></li-->
 	</ul> 
 </nav>
-<!--span id="show-menu">&#9776;</span-->
-
-
-
-
-
-<!--section class="main-menue">
-  <section class="cart-head">
-	{% with total_items=cart|length %}
-	{% if cart|length > 0 %} 
-	<a href="{% url "cart:CartDetail" %}">
-	  <img src="{% static "cart.png" %}" title="Корзина" alt="Корзина">
-	</a>
-	<p>
-	  <a href="{% url "cart:CartDetail" %}" class="cart-link">
-		{{ total_items }} <тов. {{ cart.get_total_price }} руб.>
-	  </a>
-	</p>
-	{% else %}
-	{% endif %}
-	{% endwith %}
-  </section>
-</section-->
 
 
 </header>

@@ -1,19 +1,4 @@
 @media screen and (min-width: 320px) {
-nav ul{
-height: auto;
-margin: 0px;
-padding: 0px 10%;
-width: 100%;
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;} 
-
-nav ul li:last-child {border: none;}
-nav ul li:first-of-type {}
-
-
-nav ul li{ border-right: solid 2px #fff; padding-left: 20px; padding-right: 20px;}
 
 nav{
 background-color: #235D79;
@@ -26,22 +11,32 @@ padding-left: 0px;
 transition: 0s;
 overflow: hidden;
 position: relative;
-
 } 
 
-nav ul li a {
-padding: 0px;
-text-decoration: none;
-font-size: 25px;
-color: #fff;
-}
 
+nav ul{
+height: auto;
+margin: 0px;
+padding: 0px 10%;
+width: 100%;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;} 
+
+nav ul li:last-child {border: none;}
+nav ul li:first-of-type {}
+nav ul li{ border-right: solid 2px #fff; padding-left: 20px; padding-right: 20px;}
+
+nav ul li a {padding: 0px;text-decoration: none;font-size: 25px;color: #fff;}
 nav ul li  p{color: #fff; }
 
+.blog-post-full  aside{ visibility: hidden; width: 0px;}
+
 .background {opacity: 0;}
+
 .contacts{margin: 0% 10%;padding: 2%;}
 .contacts h1{text-align: center; font-size: 36px;}
-
 .contacts ul li span{font-size: 32px;}
 
 .closebtn {
@@ -51,25 +46,25 @@ right: 25px;
 font-size: 36px;
 margin-left: 50px;
 }
+
+
 .info{height: 20%; width: 100%; padding-left: 30px;}
+.info span{font-size: 20px;}
+
 .image{height: 80%;}
 .product-window{height: 500px;}
 .post-window{display: flex;}
 
 .blog-post-list{flex-direction: row; flex-wrap: wrap;}
+.full-post {padding: 20px;}
 
-.info span{font-size: 20px;}
-#show-menu{font-size: 77px;}
+
 }
 
 @media screen and (min-width: 640px) {
 .post-window{width: 45%; margin: 1%;}
 .blog-image a img{height: 300px;}
-.post-title{
-    border-right: solid 2px #73A4BC;
-    border-top: solid 2px #73A4BC;
-    border-bottom: solid 2px #73A4BC;}
-
+.post-title{ border-right: solid 2px #73A4BC; border-top: solid 2px #73A4BC; border-bottom: solid 2px #73A4BC;}
 .full-post h1 {font-size: 38px;}    
 
 }
@@ -83,25 +78,28 @@ margin-left: 50px;
 
 
 @media screen and (min-width: 1080px) {
-.price-full-info {align-items: center; font-size: 25px;}
-.form-price-info{margin: 0% 10%;}
 
-.product-window{width: 45%; margin: 1%;}
-.products{justify-content: center;}
-.product-information h1{text-align: center; padding: 0px; margin: 0px;}
 }
 
 
 @media screen and (min-width: 1136px) {
-.product-window{width: 25%; margin: 15px; height: 415px;}
-.info {height: 40%;width: auto;padding: auto;padding-left: 0px;}
-.full-post h1{font-size: 26px;}
-.info span {text-align: left;padding-left: 15px;}
-
-.background {opacity: 0.025;}
-.image{height: 60%;}
-
+body{background: #f1f1f1;}
 footer{ border:none;  bottom: 0px;}	
+nav ul li a:hover {color: #f1f1f1;}
+footer{background-color: #235D79; background: #235D79;}
+
+.blog-post-full aside{width: 30%; margin: 0% 2.5%; visibility: visible;}
+.blog-post-full aside article{display: flex; flex-direction: column; background-color: #235D79; margin-bottom: 50px;}
+.blog-post-full aside article p {padding: 15px; margin: 0px;}
+
+.blog-post-full aside article p a{color: #fff; font-weight: bold;}
+
+
+.blog-post-full aside article img{max-width: 100%;}
+
+
+.full-post h1{font-size: 26px;}
+
 
 .blog-post-list {margin: 0px 10%;}
 
@@ -113,6 +111,13 @@ justify-content: center;
 margin: 0px;
 }
 
+
+.post-title a{
+font-size: 26px; 
+padding: 10px;
+}
+
+
 .blog-chained-posts {
 margin-bottom: 100px;
 height: auto;
@@ -120,10 +125,26 @@ display: flex;
 margin: 50px 0px;
 }
 
-.post-title a{ font-size: 26px; padding: 10px;}
 
 
-.blog-post-full{padding: 0px; border: none;}
+.full-post {
+width: 60%;
+margin: 0% 2.5%;
+width: 60%;
+padding: 0% 2.5%;
+}
+
+.blog-post-full{
+padding: 0px; 
+border: none; 
+margin-left: 10%;
+margin-right: 10%;
+margin-top: 100px;
+display: flex; 
+flex-direction: row;
+}
+
+
 .blog-post-list {
 padding: 0px 10%;
 width: auto;
@@ -132,32 +153,14 @@ flex-wrap: wrap;
 }
 
 
+.full-post, aside {background: #fff;}
+
 .post-window{height: 300px;}
-
-
-
-
-text-align: center; margin: 0px;}
-
-
-nav ul li a:hover {color: #f1f1f1;}
-
-footer{background-color: #235D79; background: #235D79;}
-
-.closebtn, #show-menu{visibility: hidden;width: 0px; height: 0px;}
-
-
-.pay-and-delivery, .contacts{margin: 0% 30%; padding: 15px;}
-.pay-and-delivery h2{text-align: center;}
-.pay-and-delivery article ul{margin: 0px; padding:0px;}
-
 .contacts{text-align: center; font-size: 26px; }
-.parameters-window{
-padding: 0px; 
-justify-content: space-between;}
+.background {opacity: 0.025;}
+.image{height: 60%;}
 
-.product-information{font-size: 26px;}
-.product-information{font-size: 26px;}
-.price-full-info{font-size: 22px;}
-.form-price-info{font-size: 20px}
 }
+
+
+
