@@ -1,6 +1,6 @@
 @font-face{font-family:Pepsy cyr-lat;src:url(fonts/10100.otf) format("opentype");}
 @font-face {font-family: h;src: url(fonts/10175.otf) format("opentype");}
-
+body{color: #2D2D2D; line-height: 180%;}
 
 li,
 .categories li{list-style:none;}

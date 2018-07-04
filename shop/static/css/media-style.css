@@ -31,7 +31,7 @@ nav ul li{ border-right: solid 2px #fff; padding-left: 20px; padding-right: 20px
 nav ul li a {padding: 0px;text-decoration: none;font-size: 25px;color: #fff;}
 nav ul li  p{color: #fff; }
 
-.blog-post-full  aside{ visibility: hidden; width: 0px;}
+.blog-post-full aside{ display: none;}
 
 .background {opacity: 0;}
 
@@ -55,6 +55,17 @@ margin-left: 50px;
 .product-window{height: 500px;}
 .post-window{display: flex;}
 
+.post-title{
+display: flex;
+text-align: left;
+flex-direction: column;
+justify-content: center;
+padding-left: 20px;
+padding-right: 20px;
+width: 50%;
+}
+
+
 .blog-post-list{flex-direction: row; flex-wrap: wrap;}
 .full-post {padding: 20px;}
 
@@ -69,10 +80,13 @@ margin-left: 50px;
 
 }
 
+@media screen and (min-width: 720px) {}
+
+
 
 @media screen and (min-width: 940px) {
 
-
+.full-post{margin: 0% 10%;}
 }
 
 
@@ -88,7 +102,7 @@ footer{ border:none;  bottom: 0px;}
 nav ul li a:hover {color: #f1f1f1;}
 footer{background-color: #235D79; background: #235D79;}
 
-.blog-post-full aside{width: 30%; margin: 0% 2.5%; visibility: visible;}
+.blog-post-full aside{width: 30%; margin: 0% 2.5%; display: block;}
 .blog-post-full aside article{display: flex; flex-direction: column; background-color: #235D79; margin-bottom: 50px;}
 .blog-post-full aside article p {padding: 15px; margin: 0px;}
 
@@ -146,7 +160,7 @@ flex-direction: row;
 
 
 .blog-post-list {
-padding: 0px 10%;
+padding: 0px 5%;
 width: auto;
 margin: 0px;
 flex-wrap: wrap;

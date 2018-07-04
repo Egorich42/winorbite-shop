@@ -13,13 +13,7 @@ SECRET_KEY = '3ygk&#=81jq!)1=!+n(sr%a7k%4!6v0wrrxk*_3ic^)u*=!nai'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_HOST_USER = "e.g.hutter@gmail.com"
-EMAIL_HOST_PASSWORD = "atlantishearth198622"
-EMAIL_USE_TLS = True
-
-ALLOWED_HOSTS = ['.winorbite.com']
+ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -29,8 +23,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'shop',
-    'cart',
-    'orders',
     'blog',
 ]
 
@@ -61,7 +53,6 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'cart.context_processors.cart',
             ],
         },
     },
@@ -111,6 +102,3 @@ MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
-# Session ID
-
-CART_SESSION_ID = 'cart'
